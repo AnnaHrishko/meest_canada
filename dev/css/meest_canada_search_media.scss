@@ -1,0 +1,47 @@
+@media(max-width: 991px){
+    .search_meest_canada {
+        height: 52px;
+        input{
+            padding-left: 52px;
+            font-size: 15px;
+            font-style: normal;
+            line-height: 109%;
+            letter-spacing: 0.34px;
+            background-size: 20px 20px;
+        }
+        button{
+            height: 38px;
+            padding: 12px 20px;
+            font-size: 11px;
+        }
+    }
+    .search_canada_wrapper {
+        width: 100%;
+        .search_meest_canada{
+            width: 70%;
+        }
+    }
+    .search_canada_wrapper{
+        &__bottom{
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            padding-left: 15px;
+            .results-search{
+                display: none;
+            }
+        }
+    }
+    .all_news_sec.canada-news{
+        .results-search{
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media(max-width: 768px){
+    .search_canada_wrapper {
+        .search_meest_canada{
+            width: 100%;
+        }
+    }
+}

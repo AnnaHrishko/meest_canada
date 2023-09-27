@@ -1,0 +1,76 @@
+@media(max-width: 1260px){
+    .write-us-wrapper{
+        width: 80%;
+    }
+}
+@media(max-width: 1055px){
+    .world-contacts-block{
+        &__countries{
+            .country-sec{
+                .content{
+                    .meest-contact-wrap{
+                        .bottom{
+                            align-items: flex-start;
+                            flex-direction: column;
+                            .city-address{
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px){
+    .write-us-wrapper{
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        border-radius: unset;
+        padding: 30px 15px;
+    }
+}
+@media(max-width: 768px){
+    .survey-wrapper {
+        margin-bottom: 20px;
+        grid-column-gap: unset;
+        display: flex;
+        width: calc(100% + 8px);
+        margin-left: -8px;
+        &__row{
+            height: 80px;
+            width: calc(33.3% - 8px);
+            margin-left: 8px;
+            padding: 15px 22px 12px 15px;
+            display: inline-flex;
+            align-items: flex-end;
+            .false-radio{
+                top: 15px;
+                transform: translateY(0);
+            }
+            .survey-text{
+                margin-left: 0;
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .flex-input-row3 {
+        display: block;
+        grid-template-columns: unset;
+        grid-column-gap: unset;
+    }
+    .form-row{
+        margin-bottom: 15px;
+    }
+    .form-write-to-us{
+        .div-end{
+            .blue_button{
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+}

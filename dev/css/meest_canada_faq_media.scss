@@ -1,0 +1,35 @@
+@media(max-width: 991px){
+    .meest-canada-faq{
+        &__wrapper{
+            width: 85%;
+        }
+    }
+}
+@media(max-width: 768px){
+    .meest-canada-faq{
+        padding: 20px 0 30px;
+        &__wrapper{
+            width: 100%;
+            .accordion-sec{
+                .name-sec{
+                    padding: 15px 20px;
+                    span{
+                        font-size: 13px;
+                        width: calc(100% - 14px);
+                    }
+                    svg{
+                        width: 14px;
+                        height: 8px;
+                    }
+                }
+                .content{
+                    padding: 15px 20px 20px 20px;
+                    p {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@media (max-width: 991px) {
+  .meest-canada-faq__wrapper {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .meest-canada-faq {
+    padding: 20px 0 30px;
+  }
+  .meest-canada-faq__wrapper {
+    width: 100%;
+  }
+  .meest-canada-faq__wrapper .accordion-sec .name-sec {
+    padding: 15px 20px;
+  }
+  .meest-canada-faq__wrapper .accordion-sec .name-sec span {
+    font-size: 13px;
+    width: calc(100% - 14px);
+  }
+  .meest-canada-faq__wrapper .accordion-sec .name-sec svg {
+    width: 14px;
+    height: 8px;
+  }
+  .meest-canada-faq__wrapper .accordion-sec .content {
+    padding: 15px 20px 20px 20px;
+  }
+  .meest-canada-faq__wrapper .accordion-sec .content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

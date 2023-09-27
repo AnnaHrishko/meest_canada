@@ -1,0 +1,96 @@
+@media screen and (max-width: 1290px) {
+  .navigations_menu_page .item_menu_navigations {
+    margin-right: 20px;
+  }
+  .navigations_menu_page .item_menu_navigations:after {
+    top: 160%;
+  }
+  .navigations_menu_page .item_menu_navigations a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .all_news_wrap_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1055px) {
+  .navigations_menu_page::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+@media screen and (max-width: 991px) {
+  .top_wrap.top_news_canada .navigations_menu_page {
+    max-width: 1055px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-top: 1px solid #C8DAEC;
+    border-bottom: 1px solid #C8DAEC;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    padding-top: 18px;
+    padding-left: 15px;
+  }
+  .top_wrap.top_news_canada .navigations_menu_page .item_menu_navigations {
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+  .top_wrap.top_news_canada .navigations_menu_page .item_menu_navigations a {
+    font-size: 12px;
+  }
+  .top_wrap.top_news_canada {
+    background: #DEEBF5;
+  }
+  .top_wrap_inner.top_news_canada {
+    background-color: unset;
+    border-radius: unset;
+    padding: 30px 0 0 0;
+  }
+  .top_wrap_inner.top_news_canada .on_index_link {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .top_wrap_inner .bread_crumbs {
+    display: none;
+  }
+  .name_page_canada {
+    font-size: 20px;
+  }
+  .all_news_wrap_grid {
+    grid-template-columns: 1fr;
+    grid-column-gap: unset;
+    grid-row-gap: 20px;
+  }
+  .all_news_sec.canada-news {
+    padding: 20px 0 30px;
+  }
+  .all_news_sec.canada-news .news_row .img_news_row {
+    margin-bottom: 10px;
+  }
+  .all_news_sec.canada-news .news_row .info_news_row {
+    padding-left: 0;
+  }
+  .all_news_sec.canada-news .news_row .info_news_row .title_news_row {
+    margin-bottom: 5px;
+  }
+  .all_news_sec.canada-news .news_row .info_news_row .descr {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .all_news_sec.canada-news .center_div {
+    margin-top: 20px;
+  }
+  .custom_chekbox.canada .checkmark {
+    width: 26px;
+    height: 26px;
+  }
+  .custom_chekbox.canada .text {
+    padding: unset;
+  }
+}
+@media screen and (max-width: 500px) {
+  .all_news_sec.canada-news .news_row .img_news_row {
+    height: 190px;
+  }
+}

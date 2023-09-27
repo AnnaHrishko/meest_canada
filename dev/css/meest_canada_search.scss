@@ -1,0 +1,64 @@
+.search_meest_canada{
+    border-radius: 100px;
+    background: #FFF;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    input{
+        background-color: transparent;
+        border: unset;
+        height: 100%;
+        padding-left: 52px;
+        color: #848D97;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 109%; /* 18.53px */
+        letter-spacing: 0.34px;
+        background-image: url(../img/search_canada.svg);
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-position: 20px center;
+        outline: none;
+        width: calc(100% - 145px);
+    }
+    button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+        border-radius: 100px;
+        background: #2361A9;
+        color: #FFF;
+        border: unset;
+        height: 54px;
+        padding: 19px 36px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 109%; /* 16.35px */
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+.search_canada_wrapper{
+    width: 55%;
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.results-search{
+    span{
+        color: #606B77;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 135%; /* 18.9px */
+        letter-spacing: 0.28px;
+    }
+}
