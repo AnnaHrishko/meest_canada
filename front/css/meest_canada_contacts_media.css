@@ -1,6 +1,18 @@
-@media (max-width: 1260px) {
+@media (max-width: 1270px) {
   .write-us-wrapper {
     width: 80%;
+  }
+  .contacts-canada-block .text .contacts-address {
+    width: calc(50% - 25px);
+    margin-right: 50px;
+  }
+  .contacts-canada-block .text .contacts-soc-media {
+    width: calc(50% - 25px);
+  }
+}
+@media (max-width: 1200px) {
+  .contacts-canada-block .text .contacts-soc-media .social-networks-wrap .soc-media-flex .soc-m {
+    margin-right: 5px;
   }
 }
 @media (max-width: 1055px) {
@@ -11,13 +23,99 @@
   .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .city-address {
     margin-bottom: 10px;
   }
+  .contacts-canada-block .text {
+    padding: 40px 20px 50px 20px;
+  }
 }
 @media (max-width: 991px) {
+  .contacts-canada-block {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .contacts-canada-block .img {
+    width: 100%;
+    border-radius: 14px 14px 0px 0px;
+    height: 130px;
+  }
+  .contacts-canada-block .img img {
+    border-radius: 14px 14px 0px 0px;
+  }
+  .contacts-canada-block .text {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+  }
+  .contacts-canada-block .text .contacts-address {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .contacts-canada-block .text .contacts-address .address-wrap {
+    margin-bottom: 12px;
+  }
+  .contacts-canada-block .text .contacts-soc-media {
+    padding-top: 0;
+    width: 100%;
+  }
+  .contacts-canada-block .text .contacts-soc-media .social-networks-wrap {
+    margin-bottom: 15px;
+  }
   .write-us-wrapper {
     width: calc(100% + 30px);
     margin-left: -15px;
     border-radius: unset;
     padding: 30px 15px;
+  }
+  .top-contacts-wrapper {
+    border-radius: unset;
+    background: #DEEBF5;
+    padding: 30px 15px 35px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+  .title-contacts-canada {
+    text-align: unset;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .world-contacts-block__countries .country-sec {
+    border-radius: 8px;
+  }
+  .world-contacts-block__countries .country-sec .name-sec {
+    padding: 16px 20px;
+  }
+  .world-contacts-block__countries .country-sec .name-sec svg {
+    width: 14px;
+    height: 8px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap {
+    padding: 20px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .top {
+    margin-bottom: 10px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .countyr-name .img-country {
+    width: 32px;
+    height: 32px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .countyr-name .title {
+    font-size: 14px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .img-link {
+    width: 22px;
+    height: 22px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .city-address {
+    font-size: 12px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .contacts {
+    flex-direction: column;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .contacts .email-link {
+    margin-bottom: 10px;
+  }
+  .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .contacts .phones-link {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 768px) {
@@ -58,5 +156,10 @@
   .form-write-to-us .div-end .blue_button {
     width: 100%;
     justify-content: space-between;
+  }
+}
+@media (max-width: 350px) {
+  .contacts-canada-block .text .contacts-soc-media .social-networks-wrap .soc-media-flex .soc-m {
+    margin-right: 5px;
   }
 }

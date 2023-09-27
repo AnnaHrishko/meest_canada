@@ -222,6 +222,20 @@
   object-fit: cover;
   width: 100%;
 }
+.world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .country-name .title {
+  color: #2361A9;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 109%; /* 18.53px */
+  letter-spacing: -0.17px;
+  text-transform: uppercase;
+}
+.world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .img-link {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
 .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom {
   display: flex;
   align-items: flex-end;
