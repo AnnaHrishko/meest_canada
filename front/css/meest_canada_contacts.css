@@ -26,7 +26,7 @@
   margin-bottom: 50px;
 }
 .contacts-canada-block .img {
-  width: 35%;
+  width: 20%;
   border-radius: 20px 0px 0px 20px;
 }
 .contacts-canada-block .img img {
@@ -36,7 +36,7 @@
   height: 100%;
 }
 .contacts-canada-block .text {
-  width: 65%;
+  width: 80%;
   padding: 40px 50px 50px 40px;
   display: flex;
   justify-content: space-between;

@@ -54,6 +54,15 @@
     }
 }
 @media(max-width: 991px){
+    .top-contacts-wrapper{
+        .on_index_link{
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .bread_crumbs{
+            display: none;
+        }
+    }
     .contacts-canada-block{
         flex-direction: column;
         margin-bottom: 30px;

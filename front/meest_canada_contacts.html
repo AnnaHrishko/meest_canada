@@ -30,9 +30,10 @@
             </a>
             <h2 class="title-contacts-canada">Contacts Canada</h2>
             <div class="contacts-canada-block">
-                <div class="img">
-                    <img src="img/canada_img.jpg" alt="">
-                </div>
+                    <picture class="img">
+                        <source srcset="img/canada_contacts_media.png" media="(max-width: 768px)">
+                        <img class="full-width" src="img/canada_img.jpg" alt="" loading="lazy">        
+                    </picture>                   
                 <div class="text">
                     <div class="contacts-address">
                             <h2 class="title">Meest Canada</h2>
@@ -403,6 +404,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script src="http://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/swiper@10.3.0/swiper-bundle.min.js "></script>
     <script src="js/script.js"></script>
 </body>
 </html>
