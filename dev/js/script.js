@@ -77,3 +77,88 @@ if ($(".our_news_swiper").length > 0){
   });
   })
 }
+
+$(function() {
+  $.validator.addMethod("emailRegex", function(value, element) {
+      return this.optional(element) || /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(value);
+  }, "");
+});
+
+$(function() {
+  $(".form-promos").validate({
+      rules: {
+          "name": {
+              required: true,
+              minlength: 3,
+          },
+          "phone": {
+              required: true,
+              number: true,
+          },
+          "email": {
+              required: true,
+              emailRegex: true,
+          },
+          "province": {
+              required: true,
+          },
+      },
+      messages: {
+          "name": {
+              required: "Required field",
+              minlength: "Enter your full name",
+          },
+          "phone": {
+              required: "Required field",
+              number: "Enter only number"
+          },
+          "email": {
+              required: "Required",
+              emailRegex: "Enter your full email",
+          },
+          "province": {
+              required: "Required",
+          },
+      },
+  });
+});
+
+$(function() {
+  $(".form-promos2").validate({
+      rules: {
+          "name": {
+              required: true,
+              minlength: 3,
+          },
+          "phone": {
+              required: true,
+              number: true,
+          },
+          "email": {
+              required: true,
+              emailRegex: true,
+          },
+          "province": {
+              required: true,
+          },
+      },
+      messages: {
+          "name": {
+              required: "Required field",
+              minlength: "Enter your full name",
+          },
+          "phone": {
+              required: "Required field",
+              number: "Enter only number"
+          },
+          "email": {
+              required: "Required",
+              emailRegex: "",
+          },
+          "province": {
+              required: "Required",
+          },
+      },
+  });
+});
+

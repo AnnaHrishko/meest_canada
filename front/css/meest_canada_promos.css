@@ -156,10 +156,10 @@
 .promos-wrapper__row .text .text-div .descr-promos {
   margin-bottom: 20px;
 }
-.promos-wrapper__row .text .text-div ul {
+.promos-wrapper__row .text .text-div .text-ul {
   padding-left: 30px;
 }
-.promos-wrapper__row .text .text-div ul li {
+.promos-wrapper__row .text .text-div .text-ul li {
   color: #606B77;
   font-size: 14px;
   font-style: normal;
@@ -170,14 +170,14 @@
   position: relative;
   list-style: none;
 }
-.promos-wrapper__row .text .text-div ul li:last-of-type {
+.promos-wrapper__row .text .text-div .text-ul li:last-of-type {
   margin-bottom: 20px;
 }
-.promos-wrapper__row .text .text-div ul li span {
+.promos-wrapper__row .text .text-div .text-ul li span {
   color: #2361A9;
   font-weight: 600;
 }
-.promos-wrapper__row .text .text-div ul li:before {
+.promos-wrapper__row .text .text-div .text-ul li:before {
   display: block;
   content: "";
   position: absolute;
@@ -199,6 +199,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 .promos-wrapper__row .text .button-discount span {
   color: #FFF;
@@ -274,10 +276,25 @@
 .form-promos .inputs-flex .input-row input {
   display: block;
   border: 1px solid #D7D8D9;
-  height: 44px;
   border-radius: 100px;
-  width: 100%;
+  width: -moz-available;
   outline: none;
+  padding: 15px 20px 18px;
+  color: #1B2B3C;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 109%;
+  letter-spacing: 0.28px;
+}
+.form-promos .inputs-flex .input-row input::placeholder {
+  color: #1B2B3C;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 109%;
+  letter-spacing: 0.28px;
+  opacity: 1;
 }
 .form-promos .privacy-police {
   display: flex;

@@ -266,6 +266,7 @@ body {
   font-weight: 500;
   line-height: 20px; /* 153.846% */
   letter-spacing: 0.26px;
+  padding: unset;
 }
 .custom_chekbox.canada .text a {
   color: #0860C7;
@@ -296,4 +297,62 @@ body {
   background: url(../img/icon_check.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  display: block;
+}
+
+#phone-error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+#phone_sender-error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: unset !important;
+  border-right: 1px solid #D7D8D9;
+  padding: 0 3px 0 8px !important;
+}
+
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 109%;
+  letter-spacing: 0.02em;
+  color: #1B2B3C;
+  margin-left: 10px;
+}
+
+.iti__arrow {
+  margin-right: 10px;
+  margin-left: 15px !important;
+  width: 12px !important;
+  height: 7px !important;
+  background-image: url(../img/arrow_phone_select.svg);
+  background-repeat: no-repeat;
+  border-left: unset !important;
+  border-right: unset !important;
+  border-top: unset !important;
+}
+
+.iti {
+  display: block !important;
+}
+
+.iti__arrow--up {
+  border-bottom: unset !important;
+}
+
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+  border-right: 1px solid #D7D8D9;
+  padding: unset !important;
 }
