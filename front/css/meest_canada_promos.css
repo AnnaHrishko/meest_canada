@@ -53,6 +53,7 @@
   display: block;
 }
 .card-promos .link {
+  text-decoration: none;
   display: flex;
   align-items: center;
 }
@@ -277,7 +278,7 @@
   display: block;
   border: 1px solid #D7D8D9;
   border-radius: 100px;
-  width: -moz-available;
+  width: 100%;
   outline: none;
   padding: 15px 20px 18px;
   color: #1B2B3C;
@@ -323,8 +324,13 @@
 
 .choose-languages-wrap {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+}
+
+#pr_policy-error {
+  position: absolute;
+  bottom: -21px;
+  left: 0;
 }
 
 body .promos-wrapper .select2-container {

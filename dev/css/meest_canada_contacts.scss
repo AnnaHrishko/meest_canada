@@ -63,13 +63,16 @@
                     display: block;
                 }
                 .link-address{
-                    color: #0061AF;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 160%;
-                    letter-spacing: 0.28px;
                     text-decoration: none;
+                    span{
+                        display: block;
+                        color: #0061AF;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 160%;
+                        letter-spacing: 0.28px;
+                    }
                 }
             }    
             .grafic-work-wrap{
@@ -225,19 +228,25 @@
                                 }
                             }
                             .title{
-                                color: #2361A9;
-                                font-size: 17px;
-                                font-style: normal;
-                                font-weight: 700;
-                                line-height: 109%; /* 18.53px */
-                                letter-spacing: -0.17px;
-                                text-transform: uppercase;
+                                a{
+                                    color: #2361A9;
+                                    font-size: 17px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 109%; /* 18.53px */
+                                    letter-spacing: -0.17px;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                }
                             }
                         }
                         .img-link{
                             width: 24px;
                             height: 24px;
                             display: block;
+                            img{
+                                width: 1005;
+                            }
                         }
                     }
                     .bottom{
@@ -246,13 +255,16 @@
                         justify-content: space-between;
                         .city-address{
                             text-decoration: none;
-                            color: #0061AF;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 160%;
-                            letter-spacing: 0.28px;
                             span{
+                                display: block;
+                                color: #0061AF;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 160%;
+                                letter-spacing: 0.28px;
+                            }
+                            .black{
                                 color: #1B2B3C;
                             }
                         }

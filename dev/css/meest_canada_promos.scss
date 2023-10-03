@@ -50,6 +50,7 @@
         display: block;
     }
     .link{
+        text-decoration: none;
         display: flex;
         align-items: center;
         span{
@@ -279,8 +280,8 @@
                 border: 1px solid #D7D8D9;
                 // height: 44px;
                 border-radius: 100px;
-                // width: 100%;
-                width: -moz-available;
+                width: 100%;
+                // width: -moz-available;
                 outline: none;
                 padding: 15px 20px 18px;
                 color: #1B2B3C;
@@ -328,7 +329,6 @@
 }
 .choose-languages-wrap{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     // .select2-container--default .select2-selection--single{
     //     border-radius: 100px!important;
@@ -339,6 +339,11 @@
     //         // padding: 16px 20px!important;
     //     }
     // }
+}
+#pr_policy-error{
+    position: absolute;
+    bottom: -21px;
+    left: 0;
 }
 
 body .promos-wrapper .select2-container{

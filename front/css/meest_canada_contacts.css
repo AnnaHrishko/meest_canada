@@ -69,13 +69,16 @@
   display: block;
 }
 .contacts-canada-block .text .contacts-address .address-wrap .link-address {
+  text-decoration: none;
+}
+.contacts-canada-block .text .contacts-address .address-wrap .link-address span {
+  display: block;
   color: #0061AF;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
   letter-spacing: 0.28px;
-  text-decoration: none;
 }
 .contacts-canada-block .text .contacts-address .grafic-work-wrap .line-work {
   display: flex;
@@ -222,7 +225,7 @@
   object-fit: cover;
   width: 100%;
 }
-.world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .country-name .title {
+.world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .country-name .title a {
   color: #2361A9;
   font-size: 17px;
   font-style: normal;
@@ -230,11 +233,15 @@
   line-height: 109%; /* 18.53px */
   letter-spacing: -0.17px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .img-link {
   width: 24px;
   height: 24px;
   display: block;
+}
+.world-contacts-block__countries .country-sec .content .meest-contact-wrap .top .img-link img {
+  width: 1005;
 }
 .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom {
   display: flex;
@@ -243,6 +250,9 @@
 }
 .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .city-address {
   text-decoration: none;
+}
+.world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .city-address span {
+  display: block;
   color: #0061AF;
   font-size: 14px;
   font-style: normal;
@@ -250,7 +260,7 @@
   line-height: 160%;
   letter-spacing: 0.28px;
 }
-.world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .city-address span {
+.world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .city-address .black {
   color: #1B2B3C;
 }
 .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .contacts {

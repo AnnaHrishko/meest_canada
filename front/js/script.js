@@ -27,9 +27,49 @@ $('.phone').each(function(){
 });
 })
 
-// $(".select").select2().change(function() {
-//     $(this).valid();
+$('.top_news_canada .item_menu_navigations').click(function(){
+  let index = $(this).attr("item-tag") 
+  $(".faq_wrap").fadeOut(0)
+  $('.wrap' + index).fadeIn(200);
+   if (index == 1) {
+     $(".faq_wrap").fadeIn(200)
+   }
+  return false
+})
+
+jQuery(function($){
+  $(".phone").mask("(999) 999-9999",{placeholder:"(000) 000-0000"}, {autoclear: true});
+});
+
+
+// function formatState (state) {
+//   if (!state.id) {
+//     return state.text;
+//   }
+//   var baseUrl = "../front/img/flags";
+//   var $state = $(
+//     '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+//   );
+//   return $state;
+// };
+
+// $(".select.language-select").select2({
+//   templateResult: formatState
 // });
+
+$(document).ready(function(){
+  function setCurrency (currency) {
+	  if (!currency.id) { return currency.text; }
+		var $currency = $('<span>' + currency.element.value + " " + currency.text + '</span>');
+		return $currency;
+	};
+	$(".language-select").select2({
+		// placeholder: "What currency do you use?", //placeholder
+		templateResult: setCurrency,
+		templateSelection: setCurrency
+	});
+})
+
 
 if ($(".our_news_swiper").length > 0){
   $(document).ready(function(){
@@ -93,7 +133,6 @@ $(function() {
           },
           "phone": {
               required: true,
-              number: true,
           },
           "email": {
               required: true,
@@ -102,6 +141,9 @@ $(function() {
           "province": {
               required: true,
           },
+          "pr_policy": {
+            required: true,
+          }
       },
       messages: {
           "name": {
@@ -110,7 +152,6 @@ $(function() {
           },
           "phone": {
               required: "Required field",
-              number: "Enter only number"
           },
           "email": {
               required: "Required",
@@ -119,6 +160,9 @@ $(function() {
           "province": {
               required: "Required",
           },
+          "pr_policy": {
+            required: "Required",
+          }
       },
   });
 });
@@ -132,7 +176,6 @@ $(function() {
           },
           "phone": {
               required: true,
-              number: true,
           },
           "email": {
               required: true,
@@ -141,6 +184,9 @@ $(function() {
           "province": {
               required: true,
           },
+          "pr_policy": {
+            required: true,
+          }
       },
       messages: {
           "name": {
@@ -149,7 +195,6 @@ $(function() {
           },
           "phone": {
               required: "Required field",
-              number: "Enter only number"
           },
           "email": {
               required: "Required",
@@ -158,6 +203,9 @@ $(function() {
           "province": {
               required: "Required",
           },
+          "pr_policy": {
+            required: "Required",
+          }
       },
   });
 });

@@ -130,5 +130,6 @@
   .promos-wrapper__row .text .form-promos .location-wrap li {
     font-size: 13px;
     line-height: 20px;
+    list-style: none;
   }
 }
