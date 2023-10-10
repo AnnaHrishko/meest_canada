@@ -28,6 +28,8 @@ $('.phone').each(function(){
 })
 
 $('.top_news_canada .item_menu_navigations').click(function(){
+  $(this).addClass("active")
+  $('.top_news_canada .item_menu_navigations').not(this).removeClass('active')
   let index = $(this).attr("item-tag") 
   $(".faq_wrap").fadeOut(0)
   $('.wrap' + index).fadeIn(200);
