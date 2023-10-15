@@ -39,25 +39,13 @@ $('.top_news_canada .item_menu_navigations').click(function(){
   return false
 })
 
-jQuery(function($){
-  $(".phone").mask("(999) 999-9999",{placeholder:"(000) 000-0000"}, {autoclear: true});
-});
-
-
-// function formatState (state) {
-//   if (!state.id) {
-//     return state.text;
-//   }
-//   var baseUrl = "../front/img/flags";
-//   var $state = $(
-//     '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
-//   );
-//   return $state;
-// };
-
-// $(".select.language-select").select2({
-//   templateResult: formatState
+// jQuery(function($){
+//   $(".phone").mask("(999) 999-9999",{placeholder:"(000) 000-0000"}, {autoclear: true});
 // });
+
+$(document).ready(function(){
+  $('.phone').mask('000-000-000',{placeholder:"000-000-000"}, {autoclear: true});
+});
 
 $(document).ready(function(){
   function setCurrency (currency) {
@@ -80,11 +68,9 @@ if ($(".our_news_swiper").length > 0){
   
   loop: false,
   rewind: true,
-  slidesPerView: 3.5,
+  slidesPerView: 3.2,
   spaceBetween: 30,
-  autoplay: {
-  delay: 2000,
-  },
+  autoplay: true,
   
   // If we need pagination
   pagination: {
@@ -120,6 +106,8 @@ if ($(".our_news_swiper").length > 0){
   })
 }
 
+
+
 $(function() {
   $.validator.addMethod("emailRegex", function(value, element) {
       return this.optional(element) || /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(value);
@@ -127,7 +115,7 @@ $(function() {
 });
 
 $(function() {
-  $(".form-promos").validate({
+  $(".form-promos1").validate({
       rules: {
           "name": {
               required: true,
@@ -135,6 +123,7 @@ $(function() {
           },
           "phone": {
               required: true,
+              minlength: 11,
           },
           "email": {
               required: true,
@@ -154,6 +143,7 @@ $(function() {
           },
           "phone": {
               required: "Required field",
+              minlength: "Enter your full phone number",
           },
           "email": {
               required: "Required",

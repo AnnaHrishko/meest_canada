@@ -1,19 +1,25 @@
+@import 'global/app';
 
 .our_news_sec.single_news{
+  @include maxWidth991(){
+    .our_news_wraper{
+      margin-bottom: 20px;
+    }
+  }
   .center_div{
     display: none;
     margin-bottom: 40px;
+    @include maxWidth991(){
+      display: flex;
+    }
   }
 }
 .center_div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center();
 }
 .top_single_news_inner.canada{
   width: 80%;
   display: flex;
-  // align-items: center;
   padding: 0px 0 40px;
   .category_line{
     margin-bottom: 20px;
@@ -29,21 +35,57 @@
   .img_single_news{
     width: 50%;
     border-radius: 10px;
-    img{
+    picture{
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
+      img{
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
     }
   }
   .text_single_news{
     width: calc(50% - 40px);
     margin-left: 40px;
   }
+  @include maxWidth991(){
+    width: 100%;
+    display: flex;
+    padding: unset;
+    flex-direction: column;
+    background-color: #F8F9FA;
+    .img_single_news {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: unset;
+      picture{
+          border-radius: unset;
+          img{
+            border-radius: unset;
+          }
+      }
+    }    
+    .text_single_news {
+      width: 100%;
+      margin-left: 0;
+      padding: 10px 15px 0;
+      .heading_single_news {
+          font-size: 20px;
+          margin-bottom: 10px;
+      }
+    }    
+  }
 }
 .single_news_wraper{
   padding: 50px 0 60px;
   width: 60%;
   margin: 0 auto;
+  @include maxWidth991(){
+    padding: 30px 0;
+    width: 100%;
+  }
   h2{
     font-weight: 700;
     font-size: 20px;
@@ -51,6 +93,10 @@
     letter-spacing: -0.01em;
     color: #2361A9;
     margin-bottom: 20px;
+    @include maxWidth991(){
+      font-size: 15px;
+      line-height: 150%;
+    }
   }
   p{
     font-weight: 500;
@@ -59,6 +105,10 @@
     letter-spacing: 0.02em;
     color: rgba(27, 43, 60, 0.6);
     margin-bottom: 20px;
+    @include maxWidth991(){
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
   h3{
     font-weight: 700;
@@ -67,6 +117,10 @@
     letter-spacing: 0.02em;
     color: #2361A9;
     margin-bottom: 20px;
+    @include maxWidth991(){
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
   blockquote{
     padding: 17px 30px;
@@ -91,13 +145,86 @@
       margin-bottom: 0;
       width: 80%;
     }
+    @include maxWidth991(){
+      padding: 20px;
+      margin-bottom: 20px;
+      &:before{
+        width: 5px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 20px;
+        width: 100%;
+      }
+    }
   }
   .blue_button{
     margin-bottom: 30px;
   }
+  // @include maxWidth991(){
+  //   padding: 30px 0;
+  //   width: 100%;
+  //   h2 {
+  //         font-size: 15px;
+  //         line-height: 150%;
+  //   }
+  //   p {
+  //         font-size: 13px;
+  //         line-height: 20px;
+  //   }
+  //   h3{
+  //         font-size: 13px;
+  //         line-height: 20px;
+  //   }
+  //   blockquote {
+  //             padding: 20px;
+  //             margin-bottom: 20px;
+  //             &:before{
+  //                 width: 5px;
+  //             }
+  //             p {
+  //             font-size: 13px;
+  //             line-height: 20px;
+  //             width: 100%;
+  //           }
+  //   }
+  // }
 }
 .our_news_swiper{
+  display: none;
+  @include maxWidth991(){
+    .news_row{
+      .img_news_row{
+         height: 40vh;
+      }
+    }
+  }
+  @include maxWidth500(){
+    .news_row{
+      .img_news_row{
+         height: 30vh;
+      }
+    }
+  }
   .news_row{
+    margin-right: 20px;
+    @include maxWidth991(){
+      .img_news_row{
+        margin-bottom: 10px;
+      }
+      .info_news_row{
+        .title_news_row{
+          margin-bottom: 5px;
+        }
+        .descr{
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+      .category_line{
+          margin-bottom: 10px;
+      }
+    }
     .img_news_row{
       display: block;
       margin-bottom: 20px;
@@ -111,6 +238,9 @@
     }
     .info_news_row{
         padding-left: 20px;
+        @include maxWidth991(){
+          padding-left: 0;
+        }
       .title_news_row{
         margin-bottom: 6px;
         display: block;
@@ -144,12 +274,18 @@
     line-height: 120%;
     text-transform: uppercase;
     color: #2361A9;
+    @include maxWidth991(){
+      font-size: 20px;
+    }
   }
 }
 
 .our_news_wraper{
   position: relative;
   margin-bottom: 55px;
+  @include maxWidth991(){
+    padding-bottom: 20px;
+  }
 }
 
 .swiper-buttons{
@@ -161,7 +297,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  @include maxWidth991(){
+    display: none!important;
+  }
 }
 
 .swiper-button-prev, .swiper-button-next{
@@ -216,17 +354,46 @@
 
 .swiper-scrollbar{
   display: none;
+  @include maxWidth991(){
+    display: block!important;
+    background: #DEEBF5!important;
+  }
+}
+.swiper-scrollbar-drag{
+  background: #0061AF!important;
+  border-radius: 8px!important;
+  width: 130px!important;
 }
 .buttons-for-sec{
   display: flex;
   align-items: center;
   .blue_button{
     margin-left: 20px;
+    @include maxWidth991(){
+      display: none;
+    }
   }
 }
 .soc_media_wraper.meest_canada{
   display: flex;
   align-items: center;
+  @include maxWidth991(){
+    .soc_media {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+      &:last-of-type{
+        margin-right: 10px;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    span{
+        font-size: 13px;
+    }
+  }
   .soc_media{
     background: #0061AF;
     width: 48px;
@@ -251,5 +418,37 @@
     color: rgba(27, 43, 60, 0.6);
   }
 }
+.top_single_news_inner{
+  @include maxWidth1290(){
+    width: 100%;
+  }
+}
+.top_meest_canada.single-news{
+  @include maxWidth991(){
+    background-color: #DEEBF5;
+    padding: unset;
+    border-radius: 20px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+  .breadcrumbs{
+    margin-bottom: 43px;
+    @include maxWidth1024(){
+      margin-bottom: 20px;
+    }
+    @include maxWidth991(){
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+  }
+}
+.top_single_news{
+  &.canada{
+    @include maxWidth991(){
+      background-color: #DEEBF5;
+    }
+  }
+}
+
 
 

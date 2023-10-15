@@ -1,7 +1,12 @@
+@import 'global/app';
 .top_wrap_inner{
     &__text-part{
         width: 55%;
         padding-bottom: 55px;
+        @include maxWidth991(){
+            width: 100%;
+            padding-bottom: 30px;
+        }
         p{
             width: 80%;
             color: #606B77;
@@ -11,6 +16,11 @@
             line-height: 22px; /* 157.143% */
             letter-spacing: 0.28px;
             margin-bottom: 20px;
+            @include maxWidth991(){
+                width: 100%;
+                font-size: 12px;
+                line-height: 18px;
+            }
             &:last-of-type{
                 margin-bottom: 0;
             }
@@ -20,8 +30,14 @@
         width: 100%;
         display: none;
         vertical-align: bottom;
-        img{
+        @include maxWidth991(){
+            display: flex;
+        }
+        picture{
             width: 100%;
+            img{
+                width: 100%;
+            }
         }
     }
     &.top_canada_about_us{
@@ -30,17 +46,32 @@
         background-position: right bottom;
         background-size: 55% 90%;
         margin-bottom: 30px;
+        @include maxWidth1290(){
+            background-size: 60% 70%; 
+        }
+        @include maxWidth991(){
+            background-image: unset;
+            margin-bottom: 0;
+        }
     }
 }
 .tags-wrapper{
     display: flex;
     margin-bottom: 30px;
+    @include maxWidth991(){
+        flex-flow: row;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
     &__tag{
         display: inline-block;
         border-radius: 8px;
         background: #FFF;
         padding: 7px 16px;
         margin-right: 10px;
+        @include maxWidth991(){
+            margin-bottom: 5px; 
+        }
         span{
             color: #0056A4;
             font-size: 14px;
@@ -49,6 +80,9 @@
             line-height: 150%; /* 21px */
             letter-spacing: 0.28px;
             text-transform: uppercase;
+            @include maxWidth991(){
+                font-size: 12px;
+            }
         }
     }
 }
@@ -57,8 +91,18 @@
     border-radius: 20px;
     background: #FFF;
     margin-bottom: 30px;
+    @include maxWidth991(){
+        flex-direction: column-reverse;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        border-radius: unset;
+        margin-bottom: 0;
+    }
     &:last-of-type{
         margin-bottom: 50px;
+        @include maxWidth991(){
+            margin-bottom: 0;
+        }
     }
     &:nth-child(odd){
         .img{
@@ -67,22 +111,41 @@
             display: flex;
             align-items: flex-end;
             vertical-align: bottom;
-            img{
+            @include maxWidth991(){
                 width: 100%;
+                margin-right: 0;
+            }
+            picture{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
             }
         }
         .text{
             width: 50%;
             padding: 50px 40px 45px 0;
+            @include maxWidth991(){
+                width: 100%;
+                padding: 40px 15px 25px;
+            }
         }
     }
     &:nth-child(even){
+        @include maxWidth991(){
+            flex-direction: column;
+            background: #DEEBF5;
+        }
         .img{
             width: calc(55% - 120px);
             margin-left: 120px;
             display: flex;
             align-items: flex-end;
             vertical-align: bottom;
+            @include maxWidth991(){
+                width: 100%;
+                margin-left: 0;
+            }
             img{
                 width: 100%;
             }
@@ -90,6 +153,10 @@
         .text{
             width: 45%;
             padding: 50px 0 45px 40px;
+            @include maxWidth991(){
+                width: 100%;
+                padding: 40px 15px 25px;
+            }
         }
     }
     .text{
@@ -102,6 +169,11 @@
             letter-spacing: 0.3px;
             text-transform: uppercase;
             margin-bottom: 20px;
+            @include maxWidth991(){
+                font-size: 20px;
+                line-height: 120%; 
+                margin-bottom: 10px;
+            }
         }
         .descr{
             color: #606B77;
@@ -111,6 +183,11 @@
             line-height: 22px; /* 157.143% */
             letter-spacing: 0.28px;
             margin-bottom: 20px;
+            @include maxWidth991(){
+                font-size: 12px;
+                line-height: 18px;
+                margin-bottom: 15px;
+            }
         }
         .link{
             display: flex;

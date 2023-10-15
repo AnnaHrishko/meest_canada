@@ -5,29 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
     <link rel="stylesheet" href="css/meest_canada_ui_kit.css">
-    <link rel="stylesheet" href="css/meest_canada_ui_kit_media.css">
     <link rel="stylesheet" href="css/meest_canada_about_us.css">
-    <link rel="stylesheet" href="css/meest_canada_about_us_media.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
 </head>
 <body>
-    <div class="top_wrap top_news_canada">
+    <div class="top_wrap top_news_canada canada">
 		<div class="container">
 			<div class="top_wrap_inner top_news_canada top_canada_about_us">
-				<ul class="bread_crumbs">
-					<li>
-						<a href="#">Main</a>
-					</li>
-                    <li>
-                        <a href="#">Track the parcel </a>
-                    </li>
-					<li>Order parcel</li>
-				</ul>     
-				<a href="#" class="on_index_link">
-					<img src="img/arrow_slider.svg" alt="">
-					<h3>All services</h3>
-				</a>
+				<!--=include components/breadcrumbs.html -->              
                 <div class="top_wrap_inner__text-part">
                     <h1 class="name_page_canada">Meest Canada - reliable and affordable delivery of parcels and commercial cargo to</h1>
                     <div class="tags-wrapper">
@@ -45,7 +33,10 @@
                     <p>Meest was established in Toronto in 1989, and its our founder, Rostyslav Kisil aimed to unite the Ukrainian diaspora in Canada with their homeland by providing means to send parcels to support loved ones. Today, we are proud to have built bridges that connect people, organizations, and projects around the world.</p>
                 </div>
                 <div class="top_wrap_inner__img-media">
-                    <img src="img/top_canada_about_us.png" alt="">
+                    <picture class="img">
+                        <source srcset="img/top_canada_about_us.png" media="(max-width: 768px)">
+                        <img class="full-width" src="img/top_canada_about_us.png" alt="" loading="lazy">        
+                    </picture>  
                 </div>
 			</div>
 		</div>
@@ -53,7 +44,10 @@
     <div class="container">
         <div class="abous-us-wrapper">
             <div class="img">
-                <img src="img/meest_canada_about_us_img1.png" alt="">
+                <picture>
+                    <source srcset="img/meest_canada_about_us_img1.png" media="(max-width: 768px)">
+                    <img class="full-width" src="img/meest_canada_about_us_img1.png" alt="" loading="lazy">        
+                </picture> 
             </div>
             <div class="text">
                 <h2 class="title">WHY USE INTERNATIONAL SHIPPING SERVICE BY MEEST?</h2>
@@ -74,16 +68,19 @@
                 </a>
             </div>
             <div class="img">
-                <img src="img/meest_canada_about_us_img2.png" alt="">
+                <picture>
+                    <source srcset="img/meest_canada_about_us_img2.png" media="(max-width: 768px)">
+                    <img class="full-width" src="img/meest_canada_about_us_img2.png" alt="" loading="lazy">        
+                </picture> 
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="http://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/swiper@10.3.0/swiper-bundle.min.js "></script>
+    <script src="js/jq.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/intlTelInput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

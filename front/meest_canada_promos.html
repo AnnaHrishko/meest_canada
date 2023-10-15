@@ -5,31 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
     <link rel="stylesheet" href="css/meest_canada_ui_kit.css">
-    <link rel="stylesheet" href="css/meest_canada_ui_kit_media.css">
     <link rel="stylesheet" href="css/meest_canada_promos.css">
-    <link rel="stylesheet" href="css/meest_canada_promos_media.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="top_wrap top_canada_promos">
+    <div class="top_wrap top_canada_promos canada">
 		<div class="container">
 			<div class="top_wrap_inner top_news_canada top_canada_promos">
-				<ul class="bread_crumbs">
-					<li>
-						<a href="#">Main</a>
-					</li>
-                    <li>
-                        <a href="#">Track the parcel </a>
-                    </li>
-					<li>Order parcel</li>
-				</ul>     
-				<a href="#" class="on_index_link">
-					<img src="img/arrow_slider.svg" alt="">
-					<h3>All services</h3>
-				</a>
+				<div class="breadcrumbs">
+				    <img class="breadcrumbs__img--mobile" src="img/components/breadcrumbs/arrow-mobile.svg" alt="">
+				    <a href="#">home</a>
+				    <img class="breadcrumbs__img--desktop" src="img/components/breadcrumbs/arrow.svg" alt="">
+				     <span>hghbj</span>
+				</div>
 				<h1 class="name_page_canada">our discounts, <br> offers, and giveaways!</h1>
 			</div>
 		</div>
@@ -87,7 +77,10 @@
             <div class="promos-wrapper__row">
                 <div class="foto-part">
                     <div class="foto">
-                        <img src="img/foto_promos1.jpg" alt="">
+                        <picture>
+							<source srcset="img/foto_promos1.jpg" media="(max-width: 768px)">
+							<img class="full-width" src="img/foto_promos1.jpg" alt="" loading="lazy">        
+						</picture>
                     </div>
                 </div>
                 <div class="text">
@@ -112,7 +105,10 @@
             <div class="promos-wrapper__row">
                 <div class="foto-part">
                     <div class="foto">
-                        <img src="img/foto_promos2.jpg" alt="">
+                        <picture>
+							<source srcset="img/foto_promos2.jpg" media="(max-width: 768px)">
+							<img class="full-width" src="img/foto_promos2.jpg" alt="" loading="lazy">        
+						</picture>
                     </div>
                     <div class="foto-descr">
                         <span>The results of the giveaway will be announced on September 21.Don't miss your chance to have an unforgettable evening!</span>
@@ -174,7 +170,10 @@
             <div class="promos-wrapper__row">
                 <div class="foto-part">
                     <div class="foto">
-                        <img src="img/foto_promos3.jpg" alt="">
+                        <picture>
+							<source srcset="img/foto_promos3.jpg" media="(max-width: 768px)">
+							<img class="full-width" src="img/foto_promos3.jpg" alt="" loading="lazy">        
+						</picture>
                     </div>
                     <div class="foto-descr">
                         <ul>
@@ -189,7 +188,7 @@
                     <h3 class="subtitle">From September 1st to October 31st, you can save CAD 20 on sending AIR* parcels to Israel that weigh 10 kg or more! Just use the promo code ISRAEL</h3>
                     <div class="text-div">
                         <span class="descr-promos">Don't missthis cultural celebration!</span>
-                        <form action="#" class="form-promos">
+                        <form action="#" class="form-promos form-promos1">
                             <div class="inputs-flex">
                                 <label for="" class="input-row">
                                     <span class="name-input">Name *</span>
@@ -240,7 +239,10 @@
             <div class="promos-wrapper__row">
                 <div class="foto-part">
                     <div class="foto">
-                        <img src="img/foto_promos4.jpg" alt="">
+                        <picture>
+							<source srcset="img/foto_promos4.jpg" media="(max-width: 768px)">
+							<img class="full-width" src="img/foto_promos4.jpg" alt="" loading="lazy">        
+						</picture>
                     </div>
                 </div>
                 <div class="text">
@@ -265,12 +267,12 @@
             </div>
         </section>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/swiper@10.3.0/swiper-bundle.min.js "></script>
+    <script src="js/jq.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/intlTelInput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

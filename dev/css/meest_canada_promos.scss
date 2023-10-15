@@ -1,18 +1,44 @@
+@import 'global/app';
 .top_wrap_inner.top_canada_promos{
     padding: 20px 40px 84px;
     background-image: url(../img/bcg_promos.png);
     background-repeat: no-repeat;
     background-size: 37% 95%;
     background-position: bottom right;
+    @include maxWidth991(){
+        padding: 20px 0px 80px;
+        background-image: unset;
+    }
+}
+.top_wrap.top_canada_promos{
+    @include maxWidth991(){
+        background-color: #DEEBF5;
+    }
 }
 .promos-cards-wrapper{
     margin-bottom: 70px;
+    @include maxWidth850(){
+        margin-bottom: 30px;
+    }
     &__inner{
         width: calc(100% - 80px);
         padding: 0 40px;
         column-gap: 23px;
         display: flex;
         margin: -60px auto 0;
+        @include maxWidth1240(){
+            width: 100%;
+            padding: 0 20px;
+            column-gap: 15px;
+        }
+        @include maxWidth991(){
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0;
+            overflow-x: scroll;
+            max-width: 1015px;
+            padding-bottom: 20px;
+        }
     }
 }
 .card-promos{
@@ -24,10 +50,26 @@
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
+    @include maxWidth1240(){
+        width: calc(25% - 15px);
+    }
+    @include maxWidth991(){
+        flex: 0 0 auto;
+        width: 80%;
+        padding: 15px 30px 20px 20px;
+    }
+    &:first-of-type{
+        @include maxWidth991(){
+            padding-left: 15px;
+        }
+    }
     .icon{
         width: 45px;
         height: 63px;
         margin-bottom: 16px;
+        @include maxWidth991(){
+            margin-bottom: 5px;
+        }
     }
     .title{
         color: #0061AF;
@@ -38,6 +80,9 @@
         letter-spacing: 0.3px;
         text-transform: uppercase;
         margin-bottom: 10px;
+        @include maxWidth991(){
+            font-size: 14px;
+        }
     }
     .descr{
         color: #606B77;
@@ -48,6 +93,11 @@
         letter-spacing: 0.26px;
         margin-bottom: 20px;
         display: block;
+        @include maxWidth991(){
+            font-size: 11px;
+            line-height: 18px;
+            margin-bottom: 12px;
+        }
     }
     .link{
         text-decoration: none;
@@ -71,28 +121,60 @@
     }
 }
 .promos-wrapper{
+    @include maxWidth850(){
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
     &__row{
         margin-bottom: 30px;
         border-radius: 20px;
         background: #FFF;
         display: flex;
+        @include maxWidth850(){
+            flex-direction: column;
+            border-radius: unset;
+        }
         .foto-part{
             width: 45%;
+            @include maxWidth850(){
+                width: 100%;
+            }
             .foto{
                 border: 1px solid #DEEBF5;
                 border-radius: 20px 0px;
                 height: 550px;
                 margin-bottom: 30px;
-                img{
+                @include maxWidth850(){
+                    border: 1px solid #DEEBF5;
+                    border-radius: unset;
+                    height: 375px;
+                    margin-bottom: 20px;
+                }
+                picture{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 20px 0px;
+                    @include maxWidth850(){
+                        border-radius: unset;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 20px 0px;
+                        @include maxWidth850(){
+                            border-radius: unset;
+                        }
+                    }
                 }
             }
             .foto-descr{
                 padding-left: 40px;
                 margin-bottom: 50px;
+                @include maxWidth850(){
+                    display: none;
+                }
                 ul{
                     padding-left: 0;
                     margin-bottom: 13px;
@@ -119,6 +201,13 @@
         .text{
             width: 55%;
             padding: 50px 75px 50px 65px;
+            @include maxWidth991(){
+                padding: 20px 35px 30px 35px;
+            }
+            @include maxWidth850(){
+                width: 100%;
+                padding: 0 15px 20px;
+            }
             .title{
                 color: #0061AF;
                 font-size: 27px;
@@ -127,6 +216,10 @@
                 line-height: 140%; /* 37.8px */
                 text-transform: uppercase;
                 margin-bottom: 20px;
+                @include maxWidth850(){
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                }
                 span{
                     color: #E60000;
                 }
@@ -139,6 +232,9 @@
                 line-height: 150%; /* 30px */
                 letter-spacing: -0.2px;
                 margin-bottom: 10px;
+                @include maxWidth850(){
+                    font-size: 15px;
+                }
             }
             .descr-promos{
                 color: #2361A9;
@@ -149,10 +245,17 @@
                 letter-spacing: -0.15px;
                 margin-bottom: 10px;
                 display: block;
+                @include maxWidth850(){
+                    font-size: 13px;
+                    line-height: 20px;
+                }
             }
             .text-div{
                 .descr-promos{
                     margin-bottom: 20px;
+                    @include maxWidth850(){
+                        margin-bottom: 10px;
+                    }
                 }
                 .text-ul{
                     padding-left: 30px;
@@ -166,6 +269,10 @@
                         margin-bottom: 10px;
                         position: relative;
                         list-style: none;
+                        @include maxWidth850(){
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
                         &:last-of-type{
                             margin-bottom: 20px;
                         }
@@ -200,6 +307,11 @@
                 justify-content: center;
                 text-decoration: none;
                 cursor: pointer;
+                @include maxWidth850(){
+                    margin-top: 20px;
+                    padding: 16px 30px;
+                    margin-bottom: 20px;
+                }
                 span{
                     color: #FFF;
                     font-size: 14px;
@@ -238,6 +350,9 @@
                 font-weight: 700;
                 line-height: 20px; /* 153.846% */
                 letter-spacing: -0.13px;
+                @include maxWidth850(){
+                    display: block;
+                }
                 ul{
                     padding-left: 0;
                     margin-bottom: 10px;
@@ -259,9 +374,17 @@
     .inputs-flex{
         display: flex;
         margin-bottom: 20px;
+        @include maxWidth1150(){
+            flex-direction: column;
+            margin-bottom: 0;
+        }
         .input-row{
             display: block;
             width: calc(50% - 10px);
+            @include maxWidth1150(){
+                width: 100%;
+                margin-bottom: 15px;
+            }
             &:nth-child(odd){
                 margin-right: 20px;
             }
@@ -317,6 +440,9 @@
     }
     .location-wrap{
         padding-left: 0;
+        @include maxWidth850(){
+            margin-bottom: 10px;
+        }
         li{
             color: #2361A9;
             font-size: 15px;
@@ -324,21 +450,30 @@
             font-weight: 700;
             line-height: 25px; /* 166.667% */
             letter-spacing: -0.15px;
+            @include maxWidth850(){
+                font-size: 13px;
+                line-height: 20px;
+                list-style: none;
+            }
+        }
+    }
+    .choose-languages-wrap{
+        @include maxWidth1150(){
+            display: flex;
+            align-items: flex-start;
+            justify-content: unset;
+            flex-direction: column;
+        }
+        .descr-promos br{
+            @include maxWidth1150(){
+                display: none;
+            }
         }
     }
 }
 .choose-languages-wrap{
     display: flex;
     justify-content: space-between;
-    // .select2-container--default .select2-selection--single{
-    //     border-radius: 100px!important;
-    //     border: 1px solid #D7D8D9!important;
-    //     height: 48px!important;
-    //     .select2-selection__rendered{
-    //         padding-left: 20px!important;
-    //         // padding: 16px 20px!important;
-    //     }
-    // }
 }
 #pr_policy-error{
     position: absolute;

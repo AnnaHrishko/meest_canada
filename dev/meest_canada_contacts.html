@@ -5,35 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
     <link rel="stylesheet" href="css/meest_canada_ui_kit.css">
-    <link rel="stylesheet" href="css/meest_canada_ui_kit_media.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
     <link rel="stylesheet" href="css/meest_canada_contacts.css">
-    <link rel="stylesheet" href="css/meest_canada_contacts_media.css">
 </head>
 <body>
     <div class="container">
         <section class="top-contacts-wrapper">
-            <ul class="bread_crumbs">
-                <li>
-                    <a href="#">Main</a>
-                </li>
-                <li>
-                    <a href="#">Track the parcel </a>
-                </li>
-                <li>Order parcel</li>
-            </ul>     
-            <a href="#" class="on_index_link">
-                <img src="img/arrow_slider.svg" alt="">
-                <h3>All services</h3>
-            </a>
+            <!--=include components/breadcrumbs.html -->
             <h2 class="title-contacts-canada">Contacts Canada</h2>
             <div class="contacts-canada-block">
-                    <picture class="img">
-                        <source srcset="img/canada_contacts_media.png" media="(max-width: 768px)">
-                        <img class="full-width" src="img/canada_img.jpg" alt="" loading="lazy">        
-                    </picture>                   
+                <picture class="img">
+                    <source srcset="img/canada_contacts_media.png" media="(max-width: 768px)">
+                    <img class="full-width" src="img/canada_img.jpg" alt="" loading="lazy">        
+                </picture>                   
                 <div class="text">
                     <div class="contacts-address">
                             <h2 class="title">Meest Canada</h2>
@@ -399,12 +385,12 @@
             </form>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="http://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/swiper@10.3.0/swiper-bundle.min.js "></script>
+    <script src="js/jq.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/intlTelInput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

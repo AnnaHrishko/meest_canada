@@ -1,3 +1,4 @@
+@import 'global/app';
 .search_meest_canada{
     border-radius: 100px;
     background: #FFF;
@@ -7,6 +8,9 @@
     justify-content: space-between;
     position: relative;
     margin-bottom: 20px;
+    @include maxWidth991(){
+        height: 52px; 
+    }
     input{
         background-color: transparent;
         border: unset;
@@ -24,6 +28,14 @@
         background-position: 20px center;
         outline: none;
         width: calc(100% - 145px);
+        @include maxWidth991(){
+            padding-left: 52px;
+            font-size: 15px;
+            font-style: normal;
+            line-height: 109%;
+            letter-spacing: 0.34px;
+            background-size: 20px 20px;
+        }
     }
     button{
         position: absolute;
@@ -43,13 +55,37 @@
         letter-spacing: 0.3px;
         text-transform: uppercase;
         cursor: pointer;
+        @include maxWidth991(){
+            height: 38px;
+            padding: 12px 20px;
+            font-size: 11px;
+        }
     }
 }
 .search_canada_wrapper{
     width: 55%;
+    @include maxWidth991(){
+        width: 100%;
+        .search_meest_canada{
+            width: 70%;
+        }
+    }
+    @include maxWidth768(){
+        .search_meest_canada{
+            width: 100%;
+        }
+    }
     &__bottom{
         display: flex;
         justify-content: space-between;
+        @include maxWidth991(){
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            padding-left: 15px;
+            .results-search{
+                display: none;
+            }
+        }
     }
 }
 .results-search{
@@ -60,5 +96,13 @@
         font-weight: 500;
         line-height: 135%; /* 18.9px */
         letter-spacing: 0.28px;
+    }
+}
+.all_news_sec.canada-news{
+    @include maxWidth991(){
+        .results-search{
+            display: block;
+            margin-bottom: 20px;
+        }
     }
 }
