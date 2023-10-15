@@ -2004,3 +2004,98 @@ html {
     width: 100%;
   }
 }
+
+.meest-canada-faq {
+  padding: 30px 0 60px;
+}
+.meest-canada-faq__wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .meest-canada-faq__wrapper {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .meest-canada-faq__wrapper {
+    width: 100%;
+  }
+}
+.meest-canada-faq__wrapper .accordion-sec {
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.meest-canada-faq__wrapper .accordion-sec.active .name-sec {
+  border-bottom: 1px solid #C8DAEC;
+}
+.meest-canada-faq__wrapper .accordion-sec.active .name-sec svg {
+  transform: rotate(180deg);
+}
+.meest-canada-faq__wrapper .accordion-sec.active .name-sec svg path {
+  fill: #2361A9;
+}
+.meest-canada-faq__wrapper .accordion-sec .name-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 25px 40px;
+}
+@media screen and (max-width: 768px) {
+  .meest-canada-faq__wrapper .accordion-sec .name-sec {
+    padding: 15px 20px;
+  }
+}
+.meest-canada-faq__wrapper .accordion-sec .name-sec span {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 109%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #2361A9;
+}
+@media screen and (max-width: 768px) {
+  .meest-canada-faq__wrapper .accordion-sec .name-sec span {
+    font-size: 13px;
+    width: calc(100% - 14px);
+  }
+}
+.meest-canada-faq__wrapper .accordion-sec .name-sec svg {
+  transition: 0.3s;
+  width: 17px;
+  height: 10px;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .meest-canada-faq__wrapper .accordion-sec .name-sec svg {
+    width: 14px;
+    height: 8px;
+  }
+}
+.meest-canada-faq__wrapper .accordion-sec .content {
+  padding: 30px 40px;
+}
+@media screen and (max-width: 768px) {
+  .meest-canada-faq__wrapper .accordion-sec .content {
+    padding: 15px 20px 20px 20px;
+  }
+}
+.meest-canada-faq__wrapper .accordion-sec .content p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  color: #606B77;
+}
+@media screen and (max-width: 768px) {
+  .meest-canada-faq__wrapper .accordion-sec .content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.meest-canada-faq__wrapper .accordion-sec .content p span {
+  color: #2361A9;
+  font-weight: 700;
+}

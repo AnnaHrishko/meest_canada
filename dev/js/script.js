@@ -168,6 +168,7 @@ $(function() {
           },
           "phone": {
               required: true,
+              minlength: 11,
           },
           "email": {
               required: true,
@@ -187,6 +188,7 @@ $(function() {
           },
           "phone": {
               required: "Required field",
+              minlength: "Enter your full phone number",
           },
           "email": {
               required: "Required",
