@@ -27,6 +27,8 @@ $('.phone').each(function(){
 });
 })
 
+
+
 $('.top_news_canada .item_menu_navigations').click(function(){
   $(this).addClass("active")
   $('.top_news_canada .item_menu_navigations').not(this).removeClass('active')
