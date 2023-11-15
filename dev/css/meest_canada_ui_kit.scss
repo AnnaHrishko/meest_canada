@@ -22,7 +22,7 @@ body{
     text-transform: uppercase;
     color: #2361A9;
 }
-.top-wrap{
+.top_wrap{
   background-color: #DEEBF5;
   border-radius: 20px;
   padding: 20px 40px 0;
@@ -44,7 +44,7 @@ body{
       font-size: 20px;
     }
   } 
-  &--nav-menu{
+  &.nav-menu{
     .navigations_menu_page{
       display: flex;
       padding-left: 0;
@@ -124,7 +124,7 @@ body{
       }
     }
   }
-  &--single-news{
+  &.single-news{
     padding: 20px 40px 40px;
     @include maxWidth991(){
       padding: 0;

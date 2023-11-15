@@ -1853,17 +1853,17 @@ html {
   box-sizing: border-box;
 }
 
-.top-wrap__text-part-ab-us {
+.top_wrap__text-part-ab-us {
   width: 55%;
   padding-bottom: 55px;
 }
 @media screen and (max-width: 991px) {
-  .top-wrap__text-part-ab-us {
+  .top_wrap__text-part-ab-us {
     width: 100%;
     padding-bottom: 30px;
   }
 }
-.top-wrap__text-part-ab-us p {
+.top_wrap__text-part-ab-us p {
   width: 80%;
   color: #606B77;
   font-size: 14px;
@@ -1874,32 +1874,32 @@ html {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
-  .top-wrap__text-part-ab-us p {
+  .top_wrap__text-part-ab-us p {
     width: 100%;
     font-size: 12px;
     line-height: 18px;
   }
 }
-.top-wrap__text-part-ab-us p:last-of-type {
+.top_wrap__text-part-ab-us p:last-of-type {
   margin-bottom: 0;
 }
-.top-wrap__img-media {
+.top_wrap__img-media {
   width: 100%;
   display: none;
   vertical-align: bottom;
 }
 @media screen and (max-width: 991px) {
-  .top-wrap__img-media {
+  .top_wrap__img-media {
     display: flex;
   }
 }
-.top-wrap__img-media picture {
+.top_wrap__img-media picture {
   width: 100%;
 }
-.top-wrap__img-media picture img {
+.top_wrap__img-media picture img {
   width: 100%;
 }
-.top-wrap--about-us {
+.top_wrap.about-us {
   background-image: url(../img/top_canada_about_us.png);
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -1907,17 +1907,17 @@ html {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1290px) {
-  .top-wrap--about-us {
+  .top_wrap.about-us {
     background-size: 60% 70%;
   }
 }
 @media screen and (max-width: 1055px) {
-  .top-wrap--about-us {
+  .top_wrap.about-us {
     background-size: 58% 65%;
   }
 }
 @media screen and (max-width: 991px) {
-  .top-wrap--about-us {
+  .top_wrap.about-us {
     background-image: unset;
     margin-bottom: 0;
   }

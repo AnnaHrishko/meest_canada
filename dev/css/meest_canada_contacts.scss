@@ -449,6 +449,7 @@
 }
 .form-row{
     width: 100%;
+    display: block;
     margin-bottom: 24px;
     position: relative;
     @include maxWidth768(){

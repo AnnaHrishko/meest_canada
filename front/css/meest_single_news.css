@@ -1873,17 +1873,17 @@ html {
   justify-content: center;
 }
 
-.top-snews-flex {
+.flex-wrapper {
   width: 80%;
   display: flex;
 }
 @media screen and (max-width: 1290px) {
-  .top-snews-flex {
+  .flex-wrapper {
     width: 100%;
   }
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex {
+  .flex-wrapper {
     width: 100%;
     display: flex;
     padding: unset;
@@ -1891,18 +1891,18 @@ html {
     background-color: #F8F9FA;
   }
 }
-.top-snews-flex .category_line {
+.flex-wrapper .category_line {
   margin-bottom: 20px;
 }
-.top-snews-flex .category_line .category_tag {
+.flex-wrapper .category_line .category_tag {
   background-color: #fff;
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex .category_line .category_tag {
+  .flex-wrapper .category_line .category_tag {
     background-color: #DEEBF5;
   }
 }
-.top-snews-flex .heading_single_news {
+.flex-wrapper .heading_single_news {
   font-weight: 700;
   font-size: 27px;
   line-height: 150%;
@@ -1911,48 +1911,48 @@ html {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex .heading_single_news {
+  .flex-wrapper .heading_single_news {
     font-size: 20px;
     margin-bottom: 10px;
   }
 }
-.top-snews-flex__img {
+.flex-wrapper__img {
   width: 50%;
   border-radius: 10px;
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex__img {
+  .flex-wrapper__img {
     width: 100%;
     margin-left: 0;
     margin-bottom: unset;
   }
 }
-.top-snews-flex__img picture {
+.flex-wrapper__img picture {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex__img picture {
+  .flex-wrapper__img picture {
     border-radius: unset;
   }
 }
-.top-snews-flex__img picture img {
+.flex-wrapper__img picture img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex__img picture img {
+  .flex-wrapper__img picture img {
     border-radius: unset;
   }
 }
-.top-snews-flex__text {
+.flex-wrapper__text {
   width: calc(50% - 40px);
   margin-left: 40px;
 }
 @media screen and (max-width: 991px) {
-  .top-snews-flex__text {
+  .flex-wrapper__text {
     width: 100%;
     margin-left: 0;
     padding: 10px 15px 0;

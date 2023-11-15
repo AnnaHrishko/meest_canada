@@ -1853,7 +1853,7 @@ html {
   box-sizing: border-box;
 }
 
-.top-wrap--canada-promos {
+.top_wrap.canada-promos {
   padding: 20px 40px 84px;
   background-image: url(../img/bcg_promos.png);
   background-repeat: no-repeat;
@@ -1861,17 +1861,11 @@ html {
   background-position: bottom right;
 }
 @media screen and (max-width: 991px) {
-  .top-wrap--canada-promos {
+  .top_wrap.canada-promos {
     width: calc(100% + 30px);
     margin-left: -15px;
     padding: 20px 15px 80px;
     background-image: unset;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .top_wrap.top_canada_promos {
-    background-color: #DEEBF5;
   }
 }
 

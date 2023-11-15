@@ -1,5 +1,5 @@
 @import 'global/app';
-.top-wrap{
+.top_wrap{
     &__text-part-ab-us{
         width: 55%;
         padding-bottom: 55px;
@@ -40,7 +40,7 @@
             }
         }
     }
-    &--about-us{
+    &.about-us{
         background-image: url(../img/top_canada_about_us.png);
         background-repeat: no-repeat;
         background-position: right bottom;

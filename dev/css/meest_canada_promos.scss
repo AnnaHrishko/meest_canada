@@ -1,6 +1,6 @@
 @import 'global/app';
-.top-wrap{
-    &--canada-promos{
+.top_wrap{
+    &.canada-promos{
         padding: 20px 40px 84px;
         background-image: url(../img/bcg_promos.png);
         background-repeat: no-repeat;
@@ -12,11 +12,6 @@
             padding: 20px 15px 80px;
             background-image: unset;
         }
-    }
-}
-.top_wrap.top_canada_promos{
-    @include maxWidth991(){
-        background-color: #DEEBF5;
     }
 }
 .promos-cards-wrapper{
