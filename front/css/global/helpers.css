@@ -1,3 +1,28 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-radius: 100px;
+  background: #2361A9;
+  column-gap: 20px;
+  text-decoration: none;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 109%; /* 15.26px */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .button {
+    padding: 12px 22px;
+    font-size: 12px;
+  }
+}
+
 .container-inner, .container__inner {
   max-width: 1330px;
   margin: 0 auto;
@@ -27,32 +52,30 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .hide-mobile {
     display: none !important;
   }
 }
 
-.hide-desktop {
-  display: none !important;
-}
-@media screen and (max-width: 1024px) {
+@media (min-width: 1025px) {
   .hide-desktop {
-    display: block !important;
-  }
-}
-
-.hide-desktop-flex {
-  display: none !important;
-}
-@media screen and (max-width: 1024px) {
-  .hide-desktop-flex {
-    display: flex !important;
+    display: none !important;
   }
 }
 
 .no-scroll {
   overflow: hidden !important;
+}
+
+.button::after {
+  line-height: 0;
+  content: url("/app/images/button-arrow.svg");
+}
+@media (max-width: 1024px) {
+  .button::after {
+    transform: scale(0.75);
+  }
 }
 
 div[data-scrollbar] {
@@ -123,6 +146,12 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
 /* COLORS */
 .bg--blue {
   background: #DEEBF5;
+}
+
+@media (max-width: 1024px) {
+  .bg--blue--mobile {
+    background: #DEEBF5;
+  }
 }
 
 .bg--blue-dark {

@@ -3,49 +3,41 @@
         @content;
     }
 }
-
 @mixin maxWidth1290() {
     @media screen and (max-width: 1290px) {
         @content;
     }
 }
-
 @mixin maxWidth1240() {
     @media screen and (max-width: 1240px) {
         @content;
     }
 }
-
 @mixin maxWidth1200() {
     @media screen and (max-width: 1200px) {
         @content;
     }
 }
-
 @mixin maxWidth1150() {
     @media screen and (max-width: 1150px) {
         @content;
     }
 }
-
 @mixin maxWidth1055() {
     @media screen and (max-width: 1055px) {
         @content;
     }
 }
-
 @mixin minWidth1025() {
     @media screen and (min-width: 1025px) {
         @content;
     }
 }
-
 @mixin maxWidth1024() {
     @media screen and (max-width: 1024px) {
         @content;
     }
 }
-
 @mixin maxWidth991() {
     @media screen and (max-width: 991px) {
         @content;
@@ -82,7 +74,6 @@
 }
 
 @mixin flex-wrap {
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -92,13 +83,11 @@
 }
 
 @mixin flex-center {
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 @mixin flex-space-between {
-    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -113,13 +102,30 @@
     height: $size;
 }
 
-@mixin mobile() {
+@mixin squareFlex($size) {
+    min-width: $size;
+    min-height: $size;
+    max-width: $size;
+    max-height: $size;
+}
+
+@mixin flexWidth($width) {
+    min-width: $width;
+    max-width: $width;
+}
+
+@mixin flexWidthReset {
+    min-width: initial;
+    max-width: initial;
+}
+
+@mixin mobile {
     @media (max-width: 1024px) {
         @content;
     }
 }
 
-@mixin desktop() {
+@mixin desktop {
     @media (min-width: 1025px) {
         @content;
     }
@@ -133,9 +139,196 @@
     @if $height != null {
         height: $height;
     }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-@mixin wrappedImage {
-    width: 100%;
-    height: auto;
+@mixin filterBlueToGray {
+    filter: grayscale(.75) opacity(0.4);
+}
+
+@mixin markedList($rowGap: 10px, $rowGapMobile: $rowGap) {
+    @include flex-column;
+    row-gap: $rowGap;
+
+    > li {
+        background: url("/app/images/list-mark.svg") no-repeat left 4px;
+        padding-left: 35px;
+
+        @include mobile {
+            padding-left: 20px;
+            background-size: 10px 10px;
+        }
+
+        a {
+            color: #2361A9;
+            font-weight: 700;
+            text-decoration-line: underline;
+        }
+    }
+
+    @include mobile {
+        row-gap: $rowGapMobile;
+    }
+}
+
+@mixin numberedList($rowGap: 10px, $rowGapMobile: $rowGap) {
+    @include flex-column;
+    row-gap: $rowGap;
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+
+    > li {
+        position: relative;
+        padding-left: 59px;
+
+        &:before {
+            @include flex-row;
+            @include flex-center;
+            @include square(45px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            background: #DEEBF5;
+            content: counter(item);
+            counter-increment: item;
+            color: #2361A9;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 26.4px */
+            letter-spacing: 0.22px;
+            text-transform: uppercase;
+        }
+
+        > ul {
+            margin-left: -32px;
+        }
+    }
+}
+
+@mixin table {
+    border: none;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+@mixin tableRounded {
+    border: 1px solid #D7D8D9;
+    border-radius: 20px;
+    border-collapse: initial;
+
+    @include mobile {
+        border-radius: 0;
+    }
+
+    th {
+        vertical-align: top;
+
+        @include mobile {
+            vertical-align: bottom;
+        }
+    }
+
+    th, td {
+        border-left: none;
+        border-top: none;
+        border-bottom: 1px solid #D7D8D9;
+        border-right: 1px solid #D7D8D9;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    tr:last-child {
+        th, td {
+            border-bottom: none;
+        }
+    }
+}
+
+@mixin tableCompact {
+    th {
+        padding: 7px 10px;
+
+        @include mobile {
+            padding: 15px 10px;
+        }
+    }
+}
+
+@mixin ignoreParentPaddings(
+    $parentPaddingLeft: 32px,
+    $parentPaddingLeftMobile: $parentPaddingLeft,
+    $parentPaddingRight: $parentPaddingLeft,
+    $parentPaddingRightMobile: $parentPaddingLeftMobile
+) {
+    margin-left: -$parentPaddingLeft;
+    margin-right: -$parentPaddingRight;
+
+    @include mobile {
+        margin-left: -$parentPaddingLeftMobile;
+        margin-right: -$parentPaddingRightMobile;
+    }
+}
+
+@mixin scrollbarVertical($width: 4px) {
+    scrollbar-width: thin;
+    scrollbar-color: #0061AF transparent;
+
+    &::-webkit-scrollbar {
+        width: $width;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: $width;
+        background: #0061AF;
+        border-radius: 8px;
+    }
+}
+
+@mixin sectionFaq {
+    @include flex-column;
+    @include flex-center;
+    @include gap(30px);
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 50px 40px 67px;
+
+    @include mobile {
+        @include gap(15px);
+        padding: 30px 15px 35px;
+        border-radius: 0;
+    }
+
+    &__title {
+        color: #2361A9;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 37.5px */
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 120%; /* 24px */
+        }
+    }
+
+    &__list {
+        width: 100%;
+        max-width: 1000px;
+    }
 }

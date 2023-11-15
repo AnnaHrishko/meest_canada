@@ -7,11 +7,11 @@ $('.meest-canada-faq__wrapper .accordion-sec').click(function() {
   return false;
 });
 
-$('.country-sec .content').hide();
-$('.country-sec').click(function() {
+$('.countries-wrapper__country-sec .content').hide();
+$('.countries-wrapper__country-sec').click(function() {
   $(this).toggleClass('active')
-  $('.country-sec').not(this).removeClass('active')
-  $('.country-sec').not(this).find('.content').slideUp()
+  $('.countries-wrapper__country-sec').not(this).removeClass('active')
+  $('.countries-wrapper__country-sec').not(this).find('.content').slideUp()
   $(this).find('.content').slideToggle()
   return false;
 });

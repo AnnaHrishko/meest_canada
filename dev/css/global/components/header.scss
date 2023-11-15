@@ -1,4 +1,5 @@
 @import "../mixins";
+
 .header {
     margin-bottom: 27px;
     padding-left: 40px;
@@ -224,7 +225,7 @@
 
             &-button {
                 position: absolute;
-                top: 16px;
+                top: 14px;
                 right: 16px;
                 cursor: pointer;
             }
@@ -232,9 +233,54 @@
 
         .header-languages {
             margin-left: 15px;
+            position: relative;
+            cursor: pointer;
 
             @include maxWidth1024() {
                 display: none;
+            }
+
+            &:hover {
+                .header-languages-selected {
+                    background: #DEEBF5;
+                }
+
+                .header-languages__list {
+                    display: block;
+                }
+            }
+
+            &__list {
+                z-index: 10;
+                width: 190px;
+                display: none;
+                position: absolute;
+                left: -142px;
+                top: 60px;
+                border-radius: 8px;
+                padding: 10px 0;
+                background: #FFF;
+                box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.12);
+
+                &-item-line {
+                    position: absolute;
+                    top: -14px;
+                    right: 13px;
+                }
+
+                &-item a {
+                    color: #2361A9;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 109%;
+                    letter-spacing: 0.26px;
+                    text-transform: uppercase;
+                    padding: 15px 26px;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
 
             &-selected {

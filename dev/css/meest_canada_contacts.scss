@@ -42,7 +42,7 @@
         flex-direction: column;
         margin-bottom: 30px;
     }
-    .img{
+    &__img{
         width: 20%;
         border-radius: 20px 0px 0px 20px;
         @include maxWidth991(){
@@ -60,7 +60,7 @@
             }
         }
     }
-    .text{
+    &__text{
         width: 80%;
         padding: 40px 50px 50px 40px;
         display: flex;
@@ -124,7 +124,7 @@
                 }
             }    
             .grafic-work-wrap{
-                .line-work{
+                &__line-work{
                     display: flex;
                     .days{
                         color: rgba(27, 43, 60, 0.70);
@@ -226,8 +226,8 @@
     }
 }
 .world-contacts-block{
-    &__countries{
-        .country-sec{
+    .countries-wrapper{
+        &__country-sec{
             background: #FFFFFF;
             border-radius: 20px;
             margin-bottom: 10px;
@@ -282,7 +282,7 @@
                     &:last-of-type{
                         border-bottom: unset;
                     }
-                    .top{
+                    &__top{
                         display: flex;
                         align-items: center;
                         text-decoration: none;
@@ -337,7 +337,7 @@
                             }
                         }
                     }
-                    .bottom{
+                    &__bottom{
                         display: flex;
                         align-items: flex-end;
                         justify-content: space-between;

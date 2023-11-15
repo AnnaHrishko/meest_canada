@@ -1,13 +1,17 @@
 @import 'global/app';
-.top_wrap_inner.top_canada_promos{
-    padding: 20px 40px 84px;
-    background-image: url(../img/bcg_promos.png);
-    background-repeat: no-repeat;
-    background-size: 37% 95%;
-    background-position: bottom right;
-    @include maxWidth991(){
-        padding: 20px 0px 80px;
-        background-image: unset;
+.top-wrap{
+    &--canada-promos{
+        padding: 20px 40px 84px;
+        background-image: url(../img/bcg_promos.png);
+        background-repeat: no-repeat;
+        background-size: 37% 95%;
+        background-position: bottom right;
+        @include maxWidth991(){
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            padding: 20px 15px 80px;
+            background-image: unset;
+        }
     }
 }
 .top_wrap.top_canada_promos{
@@ -16,30 +20,27 @@
     }
 }
 .promos-cards-wrapper{
-    margin-bottom: 70px;
+    width: calc(100% - 80px);
+    padding: 0 40px;
+    column-gap: 23px;
+    display: flex;
+    margin: -60px auto 70px;
+    @include maxWidth1240(){
+        width: 100%;
+        padding: 0 20px;
+        column-gap: 15px;
+    }
+    @include maxWidth991(){
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0;
+        overflow-x: scroll;
+        max-width: 1015px;
+        padding-bottom: 20px;
+    }
     @include maxWidth850(){
         margin-bottom: 30px;
-    }
-    &__inner{
-        width: calc(100% - 80px);
-        padding: 0 40px;
-        column-gap: 23px;
-        display: flex;
-        margin: -60px auto 0;
-        @include maxWidth1240(){
-            width: 100%;
-            padding: 0 20px;
-            column-gap: 15px;
-        }
-        @include maxWidth991(){
-            width: 100%;
-            padding-left: 0px;
-            padding-right: 0;
-            overflow-x: scroll;
-            max-width: 1015px;
-            padding-bottom: 20px;
-        }
-    }
+    }    
 }
 .card-promos{
     width: calc(25% - 23px);
@@ -63,43 +64,45 @@
             padding-left: 15px;
         }
     }
-    .icon{
-        width: 45px;
-        height: 63px;
-        margin-bottom: 16px;
-        @include maxWidth991(){
-            margin-bottom: 5px;
+    &__top{
+        .icon{
+            width: 45px;
+            height: 63px;
+            margin-bottom: 16px;
+            @include maxWidth991(){
+                margin-bottom: 5px;
+            }
+        }
+        .title{
+            color: #0061AF;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 145%; /* 21.75px */
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @include maxWidth991(){
+                font-size: 14px;
+            }
+        }
+        .descr{
+            color: #606B77;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px; /* 169.231% */
+            letter-spacing: 0.26px;
+            margin-bottom: 20px;
+            display: block;
+            @include maxWidth991(){
+                font-size: 11px;
+                line-height: 18px;
+                margin-bottom: 12px;
+            }
         }
     }
-    .title{
-        color: #0061AF;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 145%; /* 21.75px */
-        letter-spacing: 0.3px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        @include maxWidth991(){
-            font-size: 14px;
-        }
-    }
-    .descr{
-        color: #606B77;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 22px; /* 169.231% */
-        letter-spacing: 0.26px;
-        margin-bottom: 20px;
-        display: block;
-        @include maxWidth991(){
-            font-size: 11px;
-            line-height: 18px;
-            margin-bottom: 12px;
-        }
-    }
-    .link{
+    &__link{
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -125,7 +128,7 @@
         width: calc(100% + 30px);
         margin-left: -15px;
     }
-    &__row{
+    .promos-row{
         margin-bottom: 30px;
         border-radius: 20px;
         background: #FFF;
@@ -134,7 +137,7 @@
             flex-direction: column;
             border-radius: unset;
         }
-        .foto-part{
+        &__foto-part{
             width: 45%;
             @include maxWidth850(){
                 width: 100%;
@@ -198,7 +201,7 @@
                 }
             }
         }
-        .text{
+        &__text{
             width: 55%;
             padding: 50px 75px 50px 65px;
             @include maxWidth991(){

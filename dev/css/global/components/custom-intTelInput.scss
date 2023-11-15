@@ -1,0 +1,81 @@
+@import "../mixins";
+@import "~intl-tel-input/build/css/intlTelInput.min.css";
+
+.iti {
+    @include flex-row;
+    color: #1B2B3C;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 109%; /* 15.26px */
+    letter-spacing: 0.28px;
+
+    &__flag-container {
+        top: -1px;
+        bottom: -1px;
+    }
+
+    &__flag--custom {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 15, 0.12);
+    }
+
+    &__selected-flag {
+        border: 1px solid #D7D8D9;
+        border-radius: 100px 0 0 100px;
+        padding: 0 10px 0 8px;
+
+        &[aria-expanded="true"] {
+            border-color: #0061AF;
+        }
+    }
+
+    &:focus-within &__selected-flag {
+        border-right-color: #0061AF;
+    }
+
+    &--separate-dial-code &__selected-flag {
+        background-color: #FFFFFF;
+    }
+
+    &--allow-dropdown &__flag-container:hover &__selected-flag {
+        background-color: initial;
+    }
+
+    &--allow-dropdown &__flag-container &__selected-flag:hover {
+        background-color: #F3F4F5;
+    }
+
+    &--allow-dropdown &__flag-container,
+    &--separate-dial-code &__flag-container {
+        left: -1px;
+    }
+
+    &--separate-dial-code#{&}--show-flags &__selected-dial-code {
+        margin-left: 9px;
+    }
+
+    &__country-list {
+        @include scrollbarVertical;
+        padding-top: 10px;
+        border-radius: 8px;
+        max-height: 300px;
+    }
+
+    &__country {
+        position: relative;
+        padding: 14px;
+    }
+
+    &__country#{&}__active:after {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 24px;
+        height: 24px;
+        content: url("/app/images/components/custom-select2/selected.svg");
+    }
+}

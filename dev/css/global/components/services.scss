@@ -1,0 +1,118 @@
+@import "../mixins";
+
+.section-services {
+    margin-top: 50px;
+
+    .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 28px;
+
+        .section-title {
+            margin-bottom: 10px;
+        }
+
+        @include mobile {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    .services {
+        @include gap(30px, 34px);
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mobile {
+            flex-wrap: nowrap;
+            column-gap: 10px;
+        }
+
+        &-wrapper {
+            > .simplebar-wrapper {
+                padding-bottom: 24px;
+            }
+        }
+
+        &-item {
+            @include flex-column;
+            @include flexWidth(calc(33% - 19px));
+            border-radius: 20px;
+            background: #EFF1F4;
+            padding: 40px;
+
+            @include mobile {
+                padding: 30px;
+                @include flexWidth(320px);
+            }
+
+            &-img {
+                @include imgWrapper(220px, 140px);
+                margin-bottom: 40px;
+
+                @include mobile {
+                    @include imgWrapper(188px, 120px);
+                    margin-bottom: 25px;
+                }
+            }
+
+            &-title {
+                color: #2361A9;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 135%;
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+
+                @include mobile {
+                    font-size: 17px;
+                }
+            }
+
+            &-description {
+                color: #606B77;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 22px;
+                letter-spacing: 0.28px;
+                margin-bottom: 20px;
+
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 18px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &-btn {
+                color: #2361A9;
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 109%;
+                letter-spacing: 0.26px;
+                text-transform: uppercase;
+                text-decoration: none;
+                display: flex;
+                width: fit-content;
+                margin-top: auto;
+
+                svg {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    .section-footer {
+        display: none;
+
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    }
+}

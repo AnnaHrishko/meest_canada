@@ -55,6 +55,33 @@ body{
         }
     }
 }
+.top-wrap{
+  background-color: #DEEBF5;
+  border-radius: 20px;
+  padding: 20px 40px 0;
+  @include maxWidth991(){
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    border-radius: unset;
+    padding: 30px 15px 0 15px;
+  }
+  .name_page_canada{
+    margin-bottom: 20px;
+    @include maxWidth991(){
+      font-size: 20px;
+    }
+  } 
+}
+.top-wrap.canada{
+  .breadcrumbs{
+    margin-bottom: 50px;
+    @include maxWidth991(){
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
 .top_wrap.canada{
   .breadcrumbs{
     margin-bottom: 50px;
@@ -63,6 +90,8 @@ body{
     }
   }
 }
+
+
 .top_single_news.canada{
   background-color: unset;
   .breadcrumbs{

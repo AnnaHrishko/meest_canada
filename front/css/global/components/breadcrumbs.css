@@ -29,7 +29,7 @@
   color: #2361A9;
 }
 @media (max-width: 1024px) {
-  .breadcrumbs > a:nth-child(2), .breadcrumbs > span:nth-child(2) {
+  .breadcrumbs > a:nth-last-child(3), .breadcrumbs > span:nth-last-child(3) {
     color: #2361A9;
     display: inline-block;
   }

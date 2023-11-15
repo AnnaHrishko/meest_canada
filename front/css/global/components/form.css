@@ -1,0 +1,293 @@
+.form label {
+  max-height: 15px;
+  overflow: hidden;
+  color: #2361A9;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 109%; /* 15.26px */
+  letter-spacing: 0.14px;
+}
+@media (max-width: 1024px) {
+  .form label {
+    font-size: 12px;
+    letter-spacing: 0.12px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  column-gap: 15px;
+}
+.form__row {
+  display: flex;
+  flex-direction: row;
+  row-gap: 15px;
+  column-gap: 21px;
+  align-items: flex-start;
+}
+@media (max-width: 1024px) {
+  .form__row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.form__row__col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  column-gap: 7px;
+  flex-grow: 1;
+  min-width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .form__row__col {
+    row-gap: 5px;
+    column-gap: 5px;
+  }
+}
+.form__row--2_col .form__row__col {
+  min-width: calc((100% - 21px) / 2);
+  max-width: calc((100% - 21px) / 2);
+}
+@media (max-width: 1024px) {
+  .form__row--2_col .form__row__col {
+    min-width: initial;
+    max-width: initial;
+  }
+}
+.form__row--3_col {
+  column-gap: 18px;
+}
+@media (max-width: 1024px) {
+  .form__row--3_col {
+    column-gap: 14px;
+  }
+}
+.form__row--3_col .form__row__col {
+  min-width: calc((100% - 36px) / 3);
+  max-width: calc((100% - 36px) / 3);
+}
+@media (max-width: 1024px) {
+  .form__row--3_col .form__row__col {
+    min-width: initial;
+    max-width: initial;
+  }
+}
+.form__row--2_col.form__row--2_col--mobile, .form__row--3_col.form__row--3_col--mobile {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1024px) {
+  .form__row--2_col.form__row--2_col--mobile .form__row__col {
+    min-width: calc((100% - 21px) / 2);
+    max-width: calc((100% - 21px) / 2);
+  }
+}
+@media (max-width: 1024px) {
+  .form__row--3_col.form__row--3_col--mobile .form__row__col {
+    min-width: calc((100% - 36px) / 3);
+    max-width: calc((100% - 36px) / 3);
+  }
+}
+.form * {
+  appearance: none;
+}
+.form input, .form textarea {
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 15px 20px;
+  border-radius: 100px;
+  border: 1px solid #D7D8D9;
+  color: #1B2B3C;
+  outline: none !important;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  resize: none;
+}
+@media (max-width: 1024px) {
+  .form input, .form textarea {
+    padding: 14px 20px 15px;
+  }
+}
+.form input::placeholder, .form textarea::placeholder {
+  color: rgba(27, 43, 60, 0.6);
+}
+.form input:focus, .form textarea:focus {
+  border-color: #0061AF;
+}
+.form input[disabled], .form textarea[disabled] {
+  background: #F3F4F5;
+}
+.form input[data-error], .form textarea[data-error] {
+  border-color: #E40137;
+}
+.form textarea {
+  border-radius: 20px;
+}
+.form button {
+  outline: none !important;
+  border: none;
+  cursor: pointer;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  column-gap: 5px;
+  flex-grow: 1;
+}
+.form__input__group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.form__input__group__before, .form__input__group__after {
+  flex-shrink: 1;
+  background: #FFF;
+  border: 1px solid #D7D8D9;
+  color: #2361A9;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.28px;
+}
+.form__input__group__before {
+  padding: 15px 14px 15px 13px;
+  border-radius: 100px 0 0 100px;
+  border-right: none;
+}
+@media (max-width: 1024px) {
+  .form__input__group__before {
+    padding: 14px 12px 15px 12px;
+  }
+}
+.form__input__group__after {
+  padding: 15px 13px 15px 14px;
+  border-radius: 0 100px 100px 0;
+  border-left: none;
+}
+@media (max-width: 1024px) {
+  .form__input__group__after {
+    padding: 14px 12px 15px 12px;
+  }
+}
+.form__input__group input {
+  border-radius: 100px 0 0 100px;
+}
+.form__input__group:focus-within .form__input__group__after, .form__input__group:focus-within .form__input__group__before {
+  border-color: #0061AF;
+}
+.form__input__group.form__input__group--error .form__input__group__after, .form__input__group.form__input__group--error .form__input__group__before {
+  border-color: #E40137;
+}
+.form__checkbox {
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  display: inline-flex;
+  cursor: pointer;
+  border: 1px solid #8A929B;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .form__checkbox {
+    min-width: 26px;
+    min-height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+  }
+}
+.form__checkbox:before {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  background: url(/app/images/components/form/checkmark.svg) no-repeat center;
+  background-size: contain;
+  content: "";
+  opacity: 0;
+  line-height: 0;
+}
+@media (max-width: 1024px) {
+  .form__checkbox:before {
+    min-width: 26px;
+    min-height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+  }
+}
+.form__checkbox.form__checkbox--checked {
+  border-color: #2361A9;
+  background: #2361A9;
+}
+.form__checkbox.form__checkbox--checked:before {
+  opacity: 1;
+}
+.form__checkbox input {
+  display: none;
+}
+.form__checkbox__group {
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.form__checkbox__group__text {
+  color: rgba(27, 43, 60, 0.5);
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.26px;
+}
+.form__checkbox__group__text a {
+  color: #0061AF;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.26px;
+  text-decoration-line: underline;
+}
+.form__checkbox__group--agreement {
+  margin-top: 5px;
+}
+.form__error {
+  display: flex;
+  flex-direction: row;
+  row-gap: 3px;
+  column-gap: 3px;
+  padding: 0 10px;
+  color: #E40137;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.24px;
+}
+.form__error:before {
+  content: url("/app/images/components/form/error.svg");
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  line-height: 0;
+}

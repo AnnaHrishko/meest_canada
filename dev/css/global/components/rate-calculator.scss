@@ -1,0 +1,270 @@
+@import "../mixins";
+@import "../templates";
+@import "../components/form";
+@import "../components/popup";
+@import "../components/custom-select2";
+
+.rate_calculator {
+    @include flex-column;
+    @include gap(28px);
+    padding: 30px 40px 40px;
+    border-radius: 20px;
+    background: #E7F0F8;
+
+    @include mobile {
+        border-radius: 0;
+        padding: 30px 15px;
+        @include gap(20px);
+    }
+
+    &__heading {
+        @include flex-column;
+        @include flex-center;
+        @include gap(10px);
+
+        &__title {
+            color: #0056A4;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 27px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 135%; /* 36.45px */
+            letter-spacing: 0.54px;
+            text-transform: uppercase;
+
+            @include mobile {
+                color: #2361A9;
+                font-size: 20px;
+                line-height: 120%; /* 24px */
+            }
+        }
+
+        &__subtitle {
+            color: #606B77;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px; /* 157.143% */
+            letter-spacing: 0.28px;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 18px; /* 150% */
+                letter-spacing: 0.24px;
+            }
+        }
+    }
+
+    &__form {
+        &__wrapper {
+            @include flex-row;
+            @include gap(20px, 37px);
+            align-items: flex-start;
+
+            @include mobile {
+                @include flex-column;
+            }
+        }
+
+        &__divider {
+            position: relative;
+            top: 35px;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &__group {
+            @include flex-column;
+            @include gap(5px);
+            width: calc((100% - 90px) / 2);
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        &__label {
+            @extend %input_label;
+        }
+    }
+
+    &__button {
+        @include gap(80px);
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__wrapper {
+            @include flex-row;
+            @include flex-center;
+        }
+    }
+
+    .select2-selection {
+        height: 60px !important;
+        border: none !important;
+        background: #FFF !important;
+
+        .custom_select2--country__option {
+            &__img {
+                > span {
+                    @include square(40px);
+                }
+            }
+        }
+    }
+
+    &__popup {
+        &__title {
+            color: #0056A4;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 135%; /* 27px */
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+        }
+
+        &__subtitle {
+            color: #0056A4;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px; /* 214.286% */
+            letter-spacing: 0.14px;
+        }
+
+        &__form {
+            margin-top: 20px;
+
+            @include mobile {
+                margin-top: 23px;
+            }
+        }
+
+        &__result {
+            @include flex-row;
+            @include gap(54px);
+            align-items: flex-end;
+
+            &__inner {
+                @include flex-column;
+                @include gap(6px);
+            }
+
+            &__img {
+                @include imgWrapper(240px, 190px);
+            }
+        }
+
+        &__price {
+            @include flex-row;
+            @include gap(40px);
+            align-items: center;
+            margin-top: 25px;
+
+            &__img {
+                @include imgWrapper(150px, 120px);
+            }
+
+            &__text {
+                @include flex-column;
+            }
+
+            &__title {
+                color: #2361A9;
+                font-family: Montserrat;
+                font-size: 34px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%; /* 40.8px */
+                letter-spacing: 0.34px;
+                text-transform: uppercase;
+            }
+
+            &__subtitle {
+                color: #2361A9;
+                font-family: Montserrat;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 25px; /* 192.308% */
+                letter-spacing: 0.13px;
+            }
+        }
+
+        &__details {
+            @include flex-column;
+            color: #1B2B3C;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px; /* 200% */
+            letter-spacing: 0.15px;
+
+            @include mobile {
+                margin-top: 34px;
+                line-height: 22px; /* 146.667% */
+            }
+
+            &__key, &__divider {
+                color: #606B77;
+                font-family: Montserrat;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+                letter-spacing: 0.15px;
+            }
+
+            &__row {
+                &--heading > div {
+                    display: inline;
+                }
+            }
+        }
+
+        &__button {
+            @include gap(40px);
+
+            @include mobile {
+                width: 100%;
+            }
+
+            &--disabled {
+                @extend %button_progress;
+            }
+
+            &__wrapper {
+                @include flex-row;
+                @include flex-center;
+                margin-top: 30px;
+            }
+        }
+
+        &--success {
+            .rate_calculator__popup__button {
+                &__wrapper {
+                    margin-top: 66px;
+
+                    @include mobile {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-dropdown.rate_calculator__select2__dropdown {
+    border: none !important;
+}

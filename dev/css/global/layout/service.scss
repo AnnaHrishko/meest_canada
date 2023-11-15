@@ -1,0 +1,138 @@
+@import "../mixins";
+
+.page {
+    padding-bottom: 50px;
+
+    @include mobile {
+        padding-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .service_page {
+        &__wrapper {
+            @include flex-row;
+            @include gap(0, 30px);
+            align-items: flex-start;
+
+            @include mobile {
+                @include flex-column;
+                align-items: stretch;
+            }
+        }
+
+        &__column {
+            @include flex-column;
+
+            &--content {
+                @include gap(30px);
+                flex-grow: 1;
+                max-width: 850px;
+
+                @include mobile {
+                    @include gap(10px);
+                    max-width: 100%;
+                }
+            }
+
+            &--menu {
+                min-width: 450px;
+                max-width: 450px;
+                padding: 20px 40px 40px;
+                border-radius: 20px;
+                background: #FFF;
+
+                @include mobile {
+                    order: 1;
+                    border-radius: 0;
+                    border-top: 1px solid #C8DAEC;
+                    padding: 30px 15px 37px;
+                    min-width: initial;
+                    max-width: initial;
+                }
+            }
+        }
+
+        &__menu {
+            @include flex-column;
+            @include gap(15px);
+            margin-top: 21px;
+
+            @include mobile {
+                @include gap(20px);
+                margin-top: 0;
+            }
+
+            &__title {
+                color: #2361A9;
+                font-family: Montserrat;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 135%; /* 27px */
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+
+                @include mobile {
+                    text-align: center;
+                    line-height: 120%; /* 24px */
+                }
+            }
+
+            &__items {
+                @include flex-column;
+                @include gap(10px);
+
+                @include mobile {
+                    @include gap(5px);
+                }
+            }
+
+            &__item {
+                @include flex-row;
+                @include flex-space-between;
+                padding: 17px 18px 18px 20px;
+                border-radius: 14px;
+                background: #F8F9FA;
+
+                &__text {
+                    color: #9BA2A9;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 109%; /* 15.26px */
+                    letter-spacing: 0.28px;
+                    text-transform: uppercase;
+
+                    @include mobile {
+                        font-size: 13px;
+                        line-height: 109%; /* 14.17px */
+                        letter-spacing: 0.26px;
+                    }
+                }
+
+                &__img {
+                    @include imgWrapper(8px, 14px);
+
+                    img {
+                        @include filterBlueToGray;
+                    }
+                }
+
+                &--active,
+                &:hover {
+                    .service_page__menu__item__text {
+                        color: #2361A9;
+                    }
+
+                    .service_page__menu__item__img img {
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+}

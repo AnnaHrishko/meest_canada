@@ -1,0 +1,39 @@
+@import "../mixins";
+
+.tabs {
+    @include flex-column;
+
+    &__nav {
+        @include flex-row;
+        @include gap(20px);
+        padding: 0 40px;
+        border-top: 1px solid #D8E0EB;
+        border-bottom: 1px solid #D8E0EB;
+
+        &__item {
+            padding: 16px 0;
+            cursor: pointer;
+            color: #8998A8;
+            font-family: Montserrat;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 20.8px */
+            text-transform: uppercase;
+
+            &--active {
+                padding-bottom: 13px;
+                color: #2361A9;
+                border-bottom: 3px solid #2361A9;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}

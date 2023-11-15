@@ -1,4 +1,5 @@
 @import "mixins";
+@import "templates";
 
 .container {
     &-inner, &__inner {
@@ -24,36 +25,39 @@
 }
 
 .full-width--mobile {
-    @include mobile() {
+    @include mobile {
         margin-left: -15px;
         margin-right: -15px;
     }
 }
 
 .hide-mobile {
-    @include maxWidth1024() {
+    @include mobile {
         display: none !important;
     }
 }
 
 .hide-desktop {
-    display: none !important;
-
-    @include maxWidth1024() {
-        display: block !important;
-    }
-}
-
-.hide-desktop-flex {
-    display: none !important;
-
-    @include maxWidth1024() {
-        display: flex !important;
+    @include desktop {
+        display: none !important;
     }
 }
 
 .no-scroll {
     overflow: hidden !important;
+}
+
+.button {
+    @extend %button_default;
+
+    &::after {
+        line-height: 0;
+        content: url("/app/images/button-arrow.svg");
+
+        @include mobile {
+            transform: scale(.75);
+        }
+    }
 }
 
 div[data-scrollbar] {
@@ -135,6 +139,11 @@ div[data-scrollbar] {
 /* COLORS */
 .bg--blue {
     background: #DEEBF5;
+}
+.bg--blue--mobile {
+    @include mobile {
+        background: #DEEBF5;
+    }
 }
 .bg--blue-dark {
     background: #0061AF;

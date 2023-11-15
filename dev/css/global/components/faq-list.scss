@@ -1,19 +1,34 @@
 @import "../mixins";
+@import "../templates";
 
 .faq_list {
+    --display-root-hr: block;
+    --background-color: #F8F9FA;
+    --answer-padding-top: 30px;
+
+    &#{&}--white {
+        --display-root-hr: none;
+        --background-color: #FFF;
+        --answer-padding-top: 0;
+    }
+
     @include flex-column;
     @include gap(10px);
     justify-content: center;
     min-width: 100%;
 
-    @include mobile() {
+    @include mobile {
         @include gap(5px);
     }
 
     &__item {
         border-radius: 20px;
-        background: #F8F9FA;
+        background: var(--background-color);
         overflow: hidden;
+
+        @include mobile {
+            border-radius: 0;
+        }
 
         &__question {
             @include flex-row;
@@ -30,7 +45,7 @@
             letter-spacing: -0.17px;
             text-transform: uppercase;
 
-            @include mobile() {
+            @include mobile {
                 padding: 15px 20px;
                 color: #2361A9;
                 font-size: 13px;
@@ -41,12 +56,18 @@
             &__img {
                 @include imgWrapper(17px);
 
-                @include mobile() {
+                @include mobile {
                     @include imgWrapper(14px);
                 }
 
                 img {
-                    @include wrappedImage;
+                    rotate: 180deg;
+                    transition: rotate 0.5s, filter 0.5s;
+
+                    .faq_list__item.active & {
+                        filter: none;
+                        rotate: 0deg;
+                    }
                 }
             }
         }
@@ -54,18 +75,23 @@
         &__answer {
             display: none;
 
-            > hr {
+            hr {
                 display: block;
-                width: 100%;
-                height: 1px;
+                width: auto;
+                height: 0.5px;
                 background: #C8DAEC;
                 margin: 0;
                 border: none;
                 line-height: 0;
             }
 
+            >hr {
+                display: var(--display-root-hr);
+            }
+
             &__inner {
-                padding: 30px 150px 30px 40px;
+                @extend %text_base;
+                padding: var(--answer-padding-top) 110px 30px 40px;
                 color: rgba(27, 43, 60, 0.70);
                 font-family: Montserrat;
                 font-size: 15px;
@@ -74,8 +100,8 @@
                 line-height: 25px; /* 166.667% */
                 letter-spacing: 0.3px;
 
-                @include mobile() {
-                    padding: 16px 20px 20px;
+                @include mobile {
+                    padding: 16px 15px 20px;
                     font-size: 12px;
                 }
 
@@ -83,7 +109,103 @@
                     color: #2361A9;
                     font-weight: 700;
                 }
+
+                h2 {
+                    @extend %h2_base;
+                }
+
+                h3 {
+                    @extend %h3_base;
+                }
+
+                h4 {
+                    @extend %h4_base;
+                }
+
+                p {
+                    margin: 20px 0;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                i {
+                    font-style: italic;
+                    font-weight: 400;
+                }
+
+                a:not(.button) {
+                    color: #2361A9;
+                    font-weight: 700;
+                    text-decoration-line: underline;
+                }
+
+                ul {
+                    @include markedList(20px);
+                    margin: 20px 0;
+                }
+
+                hr {
+                    @include ignoreParentPaddings(40px, 15px, 110px);
+                    background: #D7D8D9;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+
+                table {
+                    @include table;
+
+                    th {
+                        padding: 12px 20px;
+
+                        @include mobile {
+                            padding: 15px 10px;
+                        }
+                    }
+
+                    td {
+                        @extend %text_base;
+                        padding: 10px 20px;
+
+                        @include mobile {
+                            padding: 12px 10px;
+                        }
+                    }
+
+                    th, td {
+                        text-align: left;
+                        border: 1px solid #D7D8D9;
+                    }
+
+                    th:first-child, td:first-child {
+                        border-left: none;
+                        padding-left: 40px !important;
+
+                        @include mobile {
+                            padding-left: 15px !important;
+                        }
+                    }
+
+                    th:last-child, td:last-child {
+                        border-right: none;
+                    }
+                }
             }
         }
+    }
+
+    .scrollable__wrapper {
+        @include ignoreParentPaddings(40px, 15px, 110px);
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }

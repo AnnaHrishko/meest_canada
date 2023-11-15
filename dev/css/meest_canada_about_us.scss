@@ -1,6 +1,6 @@
 @import 'global/app';
-.top_wrap_inner{
-    &__text-part{
+.top-wrap{
+    &__text-part-abUs{
         width: 55%;
         padding-bottom: 55px;
         @include maxWidth991(){
@@ -40,7 +40,7 @@
             }
         }
     }
-    &.top_canada_about_us{
+    &--about-us{
         background-image: url(../img/top_canada_about_us.png);
         background-repeat: no-repeat;
         background-position: right bottom;
@@ -48,6 +48,9 @@
         margin-bottom: 30px;
         @include maxWidth1290(){
             background-size: 60% 70%; 
+        }
+        @include maxWidth1055(){
+            background-size: 58% 65%;
         }
         @include maxWidth991(){
             background-image: unset;

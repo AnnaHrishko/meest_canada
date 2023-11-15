@@ -1,0 +1,282 @@
+@import "../mixins";
+@import "../templates";
+
+.form {
+    @include flex-column;
+    @include gap(15px);
+
+    &__row {
+        @include flex-row;
+        @include gap(15px, 21px);
+        align-items: flex-start;
+
+        @include mobile {
+            @include flex-column;
+            align-items: stretch;
+        }
+
+        &__col {
+            @include flex-column;
+            @include gap(7px);
+            flex-grow: 1;
+            min-width: 100%;
+            max-width: 100%;
+
+            @include mobile {
+                @include gap(5px);
+            }
+        }
+
+        &--2_col &__col {
+            min-width: calc((100% - 21px) / 2);
+            max-width: calc((100% - 21px) / 2);
+
+            @include mobile {
+                min-width: initial;
+                max-width: initial;
+            }
+        }
+
+        &--3_col {
+            column-gap: 18px;
+
+            @include mobile {
+                column-gap: 14px;
+            }
+        }
+
+        &--3_col &__col {
+            min-width: calc((100% - 36px) / 3);
+            max-width: calc((100% - 36px) / 3);
+
+            @include mobile {
+                min-width: initial;
+                max-width: initial;
+            }
+        }
+
+        &--2_col#{&}--2_col--mobile,
+        &--3_col#{&}--3_col--mobile {
+            @include flex-row;
+        }
+
+        &--2_col#{&}--2_col--mobile &__col {
+            @include mobile {
+                min-width: calc((100% - 21px) / 2);
+                max-width: calc((100% - 21px) / 2);
+            }
+        }
+
+        &--3_col#{&}--3_col--mobile &__col {
+            @include mobile {
+                min-width: calc((100% - 36px) / 3);
+                max-width: calc((100% - 36px) / 3);
+            }
+        }
+    }
+
+    * {
+        appearance: none;
+    }
+
+    input, textarea {
+        flex-grow: 1;
+        max-width: 100%;
+        padding: 15px 20px;
+        border-radius: 100px;
+        border: 1px solid #D7D8D9;
+        color: #1B2B3C;
+        outline: none !important;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0.28px;
+        resize: none;
+
+        @include mobile {
+            padding: 14px 20px 15px;
+        }
+
+        &::placeholder {
+            color: rgba(27, 43, 60, 0.60);
+        }
+
+        &:focus {
+            border-color: #0061AF;
+        }
+
+        &[disabled] {
+            background: #F3F4F5;
+        }
+
+        &[data-error] {
+            border-color: #E40137;
+        }
+    }
+
+    textarea {
+        border-radius: 20px;
+    }
+
+    label {
+        @extend %input_label;
+    }
+
+    button {
+        outline: none !important;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__input {
+        @include flex-column;
+        @include gap(5px);
+        flex-grow: 1;
+
+        &__group {
+            @include flex-row;
+            align-items: flex-start;
+
+            &__before,
+            &__after {
+                flex-shrink: 1;
+                background: #FFF;
+                border: 1px solid #D7D8D9;
+                color: #2361A9;
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                letter-spacing: 0.28px;
+            }
+
+            &__before {
+                padding: 15px 14px 15px 13px;
+                border-radius: 100px 0 0 100px;
+                border-right: none;
+
+                @include mobile {
+                    padding: 14px 12px 15px 12px;
+                }
+            }
+
+            &__after {
+                padding: 15px 13px 15px 14px;
+                border-radius: 0 100px 100px 0;
+                border-left: none;
+
+                @include mobile {
+                    padding: 14px 12px 15px 12px;
+                }
+            }
+
+            input {
+                border-radius: 100px 0 0 100px;
+            }
+
+            &:focus-within &__after,
+            &:focus-within &__before {
+                border-color: #0061AF;
+            }
+
+            &#{&}--error &__after,
+            &#{&}--error &__before {
+                border-color: #E40137
+            }
+        }
+    }
+
+    &__checkbox {
+        @include flex-center;
+        @include squareFlex(30px);
+        display: inline-flex;
+        cursor: pointer;
+        border: 1px solid #8A929B;
+        border-radius: 8px;
+        overflow: hidden;
+
+        @include mobile {
+            @include squareFlex(26px);
+        }
+
+        &:before {
+            @include squareFlex(30px);
+            background: url(/app/images/components/form/checkmark.svg) no-repeat center;
+            background-size: contain;
+            content: "";
+            opacity: 0;
+            line-height: 0;
+
+            @include mobile {
+                @include squareFlex(26px);
+            }
+        }
+
+        &#{&}--checked {
+            border-color: #2361A9;
+            background: #2361A9;
+
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        input {
+            display: none;
+        }
+
+        &__group {
+            @include flex-row;
+            @include gap(10px);
+
+            &__text {
+                color: rgba(27, 43, 60, 0.50);
+                font-family: Montserrat;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px; /* 153.846% */
+                letter-spacing: 0.26px;
+
+                a {
+                    color: #0061AF;
+                    font-family: Montserrat;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0.26px;
+                    text-decoration-line: underline;
+                }
+            }
+
+            &--agreement {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &__error {
+        @include flex-row;
+        @include gap(3px);
+        padding: 0 10px;
+        color: #E40137;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 166.667% */
+        letter-spacing: 0.24px;
+
+        &:before {
+            content: url("/app/images/components/form/error.svg");
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            line-height: 0;
+        }
+    }
+}

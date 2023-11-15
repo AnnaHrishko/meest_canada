@@ -1,0 +1,57 @@
+@import "../mixins";
+
+.popup {
+    @include flex-center;
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: auto;
+
+    &#{&}--active {
+        display: flex;
+    }
+
+    &__backdrop {
+        position: fixed;
+        background: rgba(35, 97, 169, 0.5);
+        backdrop-filter: blur(3px);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__body {
+        position: relative;
+        border-radius: 20px;
+        background: #FFF;
+        padding: 40px;
+        flex-grow: 1;
+        max-width: 670px;
+        max-height: 100%;
+        overflow: auto;
+
+        @include mobile {
+            padding: 43px 15px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+
+        @include mobile {
+            top: 15px;
+            right: 15px;
+        }
+    }
+}
