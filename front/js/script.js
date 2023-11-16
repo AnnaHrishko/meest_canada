@@ -1,11 +1,3 @@
-$('.meest-canada-faq__wrapper .content').hide();
-$('.meest-canada-faq__wrapper .accordion-sec').click(function() {
-  $(this).toggleClass('active')
-  $('.meest-canada-faq__wrapper .accordion-sec').not(this).removeClass('active')
-  $('.meest-canada-faq__wrapper .accordion-sec').not(this).find('.content').slideUp()
-  $(this).find('.content').slideToggle()
-  return false;
-});
 
 $('.countries-wrapper__country-sec .content').hide();
 $('.countries-wrapper__country-sec').click(function() {
@@ -29,21 +21,17 @@ $('.phone').each(function(){
 
 
 
-$('.top_news_canada .item_menu_navigations').click(function(){
+$('.top_wrap.nav-menu .item_menu_navigations').click(function(){
   $(this).addClass("active")
-  $('.top_news_canada .item_menu_navigations').not(this).removeClass('active')
+  $('.top_wrap.nav-menu .item_menu_navigations').not(this).removeClass('active')
   let index = $(this).attr("item-tag") 
-  $(".faq_wrap").fadeOut(0)
+  $(".faq_list").fadeOut(0)
   $('.wrap' + index).fadeIn(200);
    if (index == 1) {
-     $(".faq_wrap").fadeIn(200)
+     $(".faq_list").fadeIn(200)
    }
   return false
 })
-
-// jQuery(function($){
-//   $(".phone").mask("(999) 999-9999",{placeholder:"(000) 000-0000"}, {autoclear: true});
-// });
 
 $(document).ready(function(){
   $('.phone').mask('000-000-000',{placeholder:"000-000-000"}, {autoclear: true});
@@ -205,4 +193,25 @@ $(function() {
       },
   });
 });
+
+$('.abous-us-wrapper-text').each(function() {
+  let $pTag = $(this).find('p');
+  if($pTag.text().length > 200){
+      let shortText = $pTag.text();
+      shortText = shortText.substring(0, 200);
+      $pTag.addClass('fullArticle').hide();
+      // shortText = shortText + $('.see-more-btn')
+      $(this).append('<p class="preview">'+shortText+'</p>');
+      $(this).append($('.see-more-btn'))
+  }
+});
+
+$( ".see-more-btn" ).each(function(index) {
+  $(this).on("click", function(){
+    $(this).parent().find($('.preview')).hide()
+    $(this).parent().find($('.fullArticle')).show(); 
+  });
+});
+
+
 
