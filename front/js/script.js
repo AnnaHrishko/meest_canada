@@ -197,20 +197,22 @@ $(function() {
 $('.abous-us-wrapper-text').each(function() {
   let $pTag = $(this).find('p');
   if($pTag.text().length > 200){
-      let shortText = $pTag.text();
-      shortText = shortText.substring(0, 200);
+      let shortText = $pTag.text().substring(0, 200);
+      let btn = $(this).find('.see-more-btn');
+      btn.remove();
       $pTag.addClass('fullArticle').hide();
-      // shortText = shortText + $('.see-more-btn')
       $(this).append('<p class="preview">'+shortText+'</p>');
-      $(this).append($('.see-more-btn'))
+      $(this).append(btn);
+  } else {
+    $(this).find('.see-more-btn').hide();
   }
 });
 
-$( ".see-more-btn" ).each(function(index) {
-  $(this).on("click", function(){
-    $(this).parent().find($('.preview')).hide()
-    $(this).parent().find($('.fullArticle')).show(); 
-  });
+$( ".see-more-btn" ).on('click', function(e) {
+  e.preventDefault();
+  $(this).parent().find($('.preview')).hide();
+  $(this).parent().find($('.fullArticle')).show(); 
+  $(this).hide()
 });
 
 
