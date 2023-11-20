@@ -12,7 +12,7 @@
   text-decoration: none;
   border: unset;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .btn {
     padding: 19px 30px;
     font-size: 14px;
@@ -41,4 +41,25 @@
 .btn.btn-small {
   padding: 13px 28px;
   font-size: 13px;
+}
+.btn.link {
+  background-color: unset;
+  padding: unset;
+  font-size: 12px;
+  line-height: 109%; /* 13.08px */
+  letter-spacing: 0.24px;
+  color: #0061AF;
+}
+.btn.link svg {
+  width: 12px;
+  height: 7px;
+}
+@media screen and (max-width: 1024px) {
+  .btn.link svg {
+    width: 6px;
+    height: 10px;
+  }
+  .btn.link svg path {
+    fill: #0061AF;
+  }
 }

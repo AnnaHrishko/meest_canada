@@ -1153,7 +1153,7 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
   text-decoration: none;
   border: unset;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .btn {
     padding: 19px 30px;
     font-size: 14px;
@@ -1182,6 +1182,27 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
 .btn.btn-small {
   padding: 13px 28px;
   font-size: 13px;
+}
+.btn.link {
+  background-color: unset;
+  padding: unset;
+  font-size: 12px;
+  line-height: 109%; /* 13.08px */
+  letter-spacing: 0.24px;
+  color: #0061AF;
+}
+.btn.link svg {
+  width: 12px;
+  height: 7px;
+}
+@media screen and (max-width: 1024px) {
+  .btn.link svg {
+    width: 6px;
+    height: 10px;
+  }
+  .btn.link svg path {
+    fill: #0061AF;
+  }
 }
 
 .footer-inner {
@@ -2455,7 +2476,12 @@ html {
   justify-content: space-between;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .shipping-row:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
   .shipping-row {
     align-items: start;
     padding: 20px 20px 20px 25px;
@@ -2466,7 +2492,7 @@ html {
   align-items: center;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .shipping-row__text {
     flex-direction: column;
     align-items: start;
@@ -2477,12 +2503,12 @@ html {
   height: 30px;
   margin-right: 50px;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   .shipping-row__text img {
     margin-right: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .shipping-row__text img {
     margin-bottom: 15px;
     margin-right: 0;
@@ -2497,20 +2523,24 @@ html {
   letter-spacing: -0.17px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .shipping-row__text h3 {
     font-size: 15px;
     line-height: 135%; /* 20.25px */
     letter-spacing: 0.3px;
   }
 }
-.shipping-row__aroow-img img {
+.shipping-row__aroow-img {
   width: 17px;
   height: 10px;
 }
-@media screen and (max-width: 768px) {
-  .shipping-row__aroow-img img {
+@media screen and (max-width: 991px) {
+  .shipping-row__aroow-img {
     width: 6px;
     height: 10px;
   }
+}
+.shipping-row__aroow-img img {
+  width: 100%;
+  height: 100%;
 }

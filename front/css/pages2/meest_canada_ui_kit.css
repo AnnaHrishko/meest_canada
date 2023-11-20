@@ -1154,7 +1154,7 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
   text-decoration: none;
   border: unset;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .btn {
     padding: 19px 30px;
     font-size: 14px;
@@ -1183,6 +1183,27 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
 .btn.btn-small {
   padding: 13px 28px;
   font-size: 13px;
+}
+.btn.link {
+  background-color: unset;
+  padding: unset;
+  font-size: 12px;
+  line-height: 109%; /* 13.08px */
+  letter-spacing: 0.24px;
+  color: #0061AF;
+}
+.btn.link svg {
+  width: 12px;
+  height: 7px;
+}
+@media screen and (max-width: 1024px) {
+  .btn.link svg {
+    width: 6px;
+    height: 10px;
+  }
+  .btn.link svg path {
+    fill: #0061AF;
+  }
 }
 
 .footer-inner {
@@ -2494,7 +2515,7 @@ body {
   color: #0061AF;
   font-weight: 600;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .description {
     font-size: 12px;
     line-height: 18px;
@@ -2510,7 +2531,7 @@ body {
   letter-spacing: 0.54px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .main-title {
     font-size: 20px;
     line-height: 120%;
@@ -2541,11 +2562,19 @@ body {
   margin-bottom: 20px;
   position: relative;
 }
+@media screen and (max-width: 991px) {
+  .text_ul li {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+}
 .text_ul li:last-of-type {
   margin-bottom: 0;
 }
 .text_ul li a {
   font-weight: 600;
+  color: #2361A9;
 }
 .text_ul li:before {
   content: "";
@@ -2559,6 +2588,12 @@ body {
   border-radius: 50%;
   border: 5px solid #2361A9;
 }
+@media screen and (max-width: 991px) {
+  .text_ul li:before {
+    width: 5px;
+    height: 5px;
+  }
+}
 
 .cards-wrapper {
   display: flex;
@@ -2567,7 +2602,7 @@ body {
   width: calc(100% + 21px);
   margin-left: -21px;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   .cards-wrapper {
     width: 100%;
     margin-left: 0;
@@ -2581,24 +2616,35 @@ body {
   border-radius: 20px;
   background: #FFF;
   margin-bottom: 20px;
+  position: relative;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1024px) {
+  .card-row:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .card-row {
     width: 100%;
     margin-left: 0;
   }
 }
-.card-row__inner {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+@media screen and (max-width: 1024px) {
+  .card-row {
+    padding: 28px 25px 20px;
+    margin-bottom: 10px;
+  }
 }
 .card-row__img {
   width: 150px;
   height: 85px;
   margin-bottom: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .card-row__img {
+    width: 120px;
+    height: 50px;
+  }
 }
 .card-row__text {
   width: 70%;
@@ -2612,6 +2658,14 @@ body {
   .card-row__text {
     width: 100%;
   }
+}
+@media screen and (max-width: 1024px) {
+  .card-row__text .card-row__bottom {
+    display: none;
+  }
+}
+.card-row__text .card-row__bottom .btn {
+  display: flex;
 }
 .card-row__heading {
   color: #2361A9;
@@ -2633,14 +2687,49 @@ body {
 .card-row .description {
   margin-bottom: 15px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
+  .card-row .description {
+    margin-bottom: 0;
+  }
+}
+.card-row .btn {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
   .card-row .btn {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .card-row .btn .img {
+  .card-row .btn {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card-row .btn {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card-row .btn.link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .card-row .btn svg {
     margin-left: 25px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card-row .btn svg {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card-row .btn svg {
+    margin-left: 10px;
   }
 }
 
@@ -2731,7 +2820,6 @@ body {
   padding: 26px 30px;
   background-color: #FFF;
   border-radius: 20px;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 1024px) {
   .main-card {
@@ -2817,7 +2905,7 @@ body {
 .main-card__text .description {
   width: 60%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .main-card__text .description {
     width: 100%;
   }

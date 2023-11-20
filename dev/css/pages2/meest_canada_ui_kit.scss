@@ -39,7 +39,7 @@ body{
       color: #0061AF;
       font-weight: 600;
     }
-    @include maxWidth768(){
+    @include maxWidth991(){
       font-size: 12px;
       line-height: 18px;
     }
@@ -52,7 +52,7 @@ body{
     line-height: 135%; /* 36.45px */
     letter-spacing: 0.54px;
     text-transform: uppercase;
-    @include maxWidth768(){
+    @include maxWidth991(){
       font-size: 20px;
       line-height: 120%;
     }
@@ -79,11 +79,17 @@ body{
       letter-spacing: 0.28px;
       margin-bottom: 20px;
       position: relative;
+      @include maxWidth991(){
+        font-size: 12px;
+        line-height: 18px; 
+        margin-bottom: 10px;
+      }
       &:last-of-type{
         margin-bottom: 0;
       }
       a{
         font-weight: 600;
+        color: #2361A9;
       }
       &:before{
         content: "";
@@ -97,6 +103,10 @@ body{
         background-color: #fff;
         border-radius: 50%;
         border: 5px solid #2361A9;
+        @include maxWidth991(){
+            width: 5px;
+            height: 5px;
+        }
       }
     }
   }
@@ -106,7 +116,7 @@ body{
     flex-wrap: wrap;
     width: calc(100% + 21px);
     margin-left: -21px;
-    @include maxWidth1150(){
+    @include maxWidth1200(){
       width: 100%;
       margin-left: 0;
     }
@@ -118,21 +128,35 @@ body{
     border-radius: 20px;
     background: #FFF;
     margin-bottom: 20px;
-    @include maxWidth1150(){
+    position: relative;
+    &:last-of-type{
+        @include maxWidth1024(){
+            margin-bottom: 30px;
+        }
+    }
+    @include maxWidth1200(){
       width: 100%;
       margin-left: 0;
     }
-    &__inner{
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
+    @include maxWidth1024(){
+        padding: 28px 25px 20px;
+        margin-bottom: 10px;
     }
+    // &__inner{
+    //   width: 70%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   height: 100%;
+    // }
     &__img{
         width: 150px;
         height: 85px;
         margin-bottom: 18px;
+        @include maxWidth1024(){
+            width: 120px;
+            height: 50px;
+        }
     }
     &__text{
       width: 70%;
@@ -142,6 +166,14 @@ body{
       @include maxWidth1200(){
         width: 100%;
       }
+      .card-row__bottom{
+            @include maxWidth1024(){
+                display: none;
+            }
+            .btn{
+                display: flex;
+            }
+        }
     }
     &__heading{
         color: #2361A9;
@@ -160,16 +192,39 @@ body{
     }
     .description{
         margin-bottom: 15px;
+        @include maxWidth1024(){
+            margin-bottom: 0;
+        }
     }
     .btn{
-      @include maxWidth1200(){
-        font-size: 12px;
-      }
-      .img{
-        @include maxWidth1200(){
-          margin-left: 25px;
+        display: none;
+        @include maxWidth1440(){
+            font-size: 12px;
         }
-      }
+        @include maxWidth1200(){
+            font-size: 11px;
+        }
+        @include maxWidth1024(){
+            display: flex;
+        }
+        &.link{
+            @include maxWidth1024(){
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        svg{
+            @include maxWidth1440(){
+            margin-left: 25px;
+            }
+            @include maxWidth1200(){
+                margin-left: 20px;
+            }
+            @include maxWidth1024(){
+                margin-left: 10px;
+            }
+        }
     }
   }
   .navigation-tabs{
@@ -254,19 +309,19 @@ body{
     padding: 26px 30px;
     background-color: #FFF;
     border-radius: 20px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     @include maxWidth1024(){
-      width: calc(100% + 30px);
-      margin-left: -15px;
-      border-radius: 0;
-      padding: 30px 15px 25px;
-      flex-direction: column;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        border-radius: 0;
+        padding: 30px 15px 25px;
+        flex-direction: column;
     }
     &.navgtn{
-      padding: 35px 40px 0;
-      @include maxWidth1024(){
-        padding: 30px 15px 0;
-      }
+        padding: 35px 40px 0;
+        @include maxWidth1024(){
+            padding: 30px 15px 0;
+        }
     }
     &.eCom{
       .main-card__f-wrap{
@@ -325,7 +380,7 @@ body{
         }
         .description{
             width: 60%;
-            @include maxWidth1024(){
+            @include maxWidth1200(){
               width: 100%;
             }
         }
