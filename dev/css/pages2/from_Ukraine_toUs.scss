@@ -1,3 +1,4 @@
+@import '../global/app';
 .shipping-row{
     border-radius: 20px;
     background: #FFF;
@@ -6,14 +7,29 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    @include maxWidth768(){
+        align-items: start;
+        padding: 20px 20px 20px 25px;
+    }
     &__text{
         display: flex;
         align-items: center;
         text-decoration: none;
+        @include maxWidth768(){
+            flex-direction: column;
+            align-items: start;
+        }
         img{
             width: 116px;
             height: 30px;
             margin-right: 50px;
+            @include maxWidth1150(){
+                margin-right: 20px;
+            }
+            @include maxWidth768(){
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
         }
         h3{
             color: #2361A9;
@@ -23,12 +39,21 @@
             line-height: 109%; /* 18.53px */
             letter-spacing: -0.17px;
             text-transform: uppercase;
+            @include maxWidth768(){
+                font-size: 15px;
+                line-height: 135%; /* 20.25px */
+                letter-spacing: 0.3px;
+            }
         }
     }
-    &__img{
+    &__aroow-img{
         img{
             width: 17px;
             height: 10px;
+            @include maxWidth768(){
+                width: 6px;
+                height: 10px;
+            }
         }
     }
 }

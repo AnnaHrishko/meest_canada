@@ -2,6 +2,11 @@
     border-radius: 20px;
     background: #FFF;
     margin-bottom: 30px;
+    @include maxWidth1024(){
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        max-width: unset;
+    }
     .breadcrumbs{
         display: none;
     }
