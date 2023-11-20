@@ -2336,31 +2336,3 @@ html {
   line-height: 22px; /* 157.143% */
   letter-spacing: 0.28px;
 }
-
-.intrn-parcl-del-sec {
-  display: flex;
-}
-.intrn-parcl-del-sec__left {
-  width: calc(40% - 30px);
-  margin-right: 30px;
-}
-.intrn-parcl-del-sec__right {
-  width: 60%;
-}
-.intrn-parcl-del-sec .top-row {
-  padding: 26px 30px;
-  background-color: #FFF;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  display: flex;
-}
-.intrn-parcl-del-sec .top-row__img {
-  width: calc(30% - 10px);
-  margin-right: 10px;
-}
-.intrn-parcl-del-sec .top-row__text {
-  width: 70%;
-}
-.intrn-parcl-del-sec .top-row__text .main-title {
-  margin-bottom: 10px;
-}

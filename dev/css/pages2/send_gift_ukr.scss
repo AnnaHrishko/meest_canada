@@ -1,0 +1,70 @@
+.gifts-heading-wrap{
+    border-radius: 20px;
+    background: #FFF;
+    margin-bottom: 30px;
+    .breadcrumbs{
+        display: none;
+    }
+    &__img{
+        border-radius: 20px 20px 0px 0px;
+        img{
+            width: 100%;
+        }
+    }
+    &__text{
+        padding: 30px 40px 40px;
+    }
+    &__text-inner{
+        width: 75%;
+    }
+}
+.how-work-wrapper{
+    border-radius: 20px;
+    background: #FFF;
+    padding: 30px 40px 40px;
+    &__heading{
+        color: #2361A9;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 109%; /* 21.8px */
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+    .description{
+        margin-bottom: 20px;
+    }
+}
+.purchases-wrapper{
+    display: flex;
+    width: calc(100% + 56px);
+    margin-left: -56px;
+    margin-bottom: 40px;
+    &__item{
+        width: calc(100%/3 - 56px);
+        margin-left: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img{
+        width: 100%;
+        margin-bottom: 20px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.text-wrap-purchases{
+    margin-bottom: 25px;
+    &__title{
+        color: #0056A4;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px; /* 147.059% */
+        letter-spacing: 0.17px;
+        margin-bottom: 20px;
+    }
+}
