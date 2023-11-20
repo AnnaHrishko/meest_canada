@@ -73,7 +73,7 @@
 
         @include mobile {
             width: calc(100% - 30px);
-            flex-wrap: wrap;
+            flexWrap: wrap;
             justify-content: space-between;
             flex-direction: column;
         }

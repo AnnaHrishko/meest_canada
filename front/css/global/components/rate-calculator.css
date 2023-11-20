@@ -783,6 +783,7 @@
 .rate_calculator__popup__result__img img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 .rate_calculator__popup__price {
   display: flex;
@@ -801,6 +802,7 @@
 .rate_calculator__popup__price__img img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 .rate_calculator__popup__price__text {
   display: flex;

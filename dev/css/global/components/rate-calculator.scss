@@ -5,7 +5,7 @@
 @import "../components/custom-select2";
 
 .rate_calculator {
-    @include flex-column;
+    @include flexColumn;
     @include gap(28px);
     padding: 30px 40px 40px;
     border-radius: 20px;
@@ -18,8 +18,8 @@
     }
 
     &__heading {
-        @include flex-column;
-        @include flex-center;
+        @include flexColumn;
+        @include flexCenter;
         @include gap(10px);
 
         &__title {
@@ -60,12 +60,12 @@
 
     &__form {
         &__wrapper {
-            @include flex-row;
+            @include flexRow;
             @include gap(20px, 37px);
             align-items: flex-start;
 
             @include mobile {
-                @include flex-column;
+                @include flexColumn;
             }
         }
 
@@ -79,7 +79,7 @@
         }
 
         &__group {
-            @include flex-column;
+            @include flexColumn;
             @include gap(5px);
             width: calc((100% - 90px) / 2);
 
@@ -101,8 +101,8 @@
         }
 
         &__wrapper {
-            @include flex-row;
-            @include flex-center;
+            @include flexRow;
+            @include flexCenter;
         }
     }
 
@@ -151,12 +151,12 @@
         }
 
         &__result {
-            @include flex-row;
+            @include flexRow;
             @include gap(54px);
             align-items: flex-end;
 
             &__inner {
-                @include flex-column;
+                @include flexColumn;
                 @include gap(6px);
             }
 
@@ -166,7 +166,7 @@
         }
 
         &__price {
-            @include flex-row;
+            @include flexRow;
             @include gap(40px);
             align-items: center;
             margin-top: 25px;
@@ -176,7 +176,7 @@
             }
 
             &__text {
-                @include flex-column;
+                @include flexColumn;
             }
 
             &__title {
@@ -202,7 +202,7 @@
         }
 
         &__details {
-            @include flex-column;
+            @include flexColumn;
             color: #1B2B3C;
             font-family: Montserrat;
             font-size: 15px;
@@ -245,8 +245,8 @@
             }
 
             &__wrapper {
-                @include flex-row;
-                @include flex-center;
+                @include flexRow;
+                @include flexCenter;
                 margin-top: 30px;
             }
         }

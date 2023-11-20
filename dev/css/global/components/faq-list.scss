@@ -12,7 +12,7 @@
         --answer-padding-top: 0;
     }
 
-    @include flex-column;
+    @include flexColumn;
     @include gap(10px);
     justify-content: center;
     min-width: 100%;
@@ -31,8 +31,8 @@
         }
 
         &__question {
-            @include flex-row;
-            @include flex-space-between;
+            @include flexRow;
+            @include flexSpaceBetween;
             @include gap(30px);
             padding: 25px 30px 25px 40px;
             cursor: pointer;

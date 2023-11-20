@@ -22,7 +22,7 @@
   }
   .tags-wrapper {
     flex-flow: row;
-    flex-wrap: wrap;
+    flexWrap: wrap;
     margin-bottom: 10px;
   }
   .tags-wrapper__tag {

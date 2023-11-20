@@ -6,7 +6,7 @@
     padding: 60px 40px 20px 40px;
     border-radius: 20px 20px 0 0;
     max-width: 1250px;
-    flex-wrap: wrap;
+    flexWrap: wrap;
     margin-bottom: 40px;
 
     @include maxWidth1440() {

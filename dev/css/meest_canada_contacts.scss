@@ -388,7 +388,7 @@
                             .phones-link{
                                 display: flex;
                                 @include maxWidth991(){
-                                    flex-wrap: wrap;
+                                    flexWrap: wrap;
                                 }
                                 .link-phone{
                                     text-decoration: none;

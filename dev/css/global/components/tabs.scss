@@ -1,10 +1,10 @@
 @import "../mixins";
 
 .tabs {
-    @include flex-column;
+    @include flexColumn;
 
     &__nav {
-        @include flex-row;
+        @include flexRow;
         @include gap(20px);
         padding: 0 40px;
         border-top: 1px solid #D8E0EB;

@@ -72,17 +72,17 @@
 
         &__filter {
             &__wrapper {
-                @include flex-row;
+                @include flexRow;
                 @include gap(15px, 10px);
                 margin-top: 30px;
 
                 @include mobile() {
-                    @include flex-column;
+                    @include flexColumn;
                 }
             }
 
             &__group {
-                @include flex-column;
+                @include flexColumn;
                 @include gap(7px);
                 position: relative;
                 justify-content: flex-end;
@@ -158,8 +158,8 @@
         }
 
         &__cards {
-            @include flex-row;
-            @include flex-wrap;
+            @include flexRow;
+            @include flexWrap;
             @include gap(25px);
             width: 100%;
 
@@ -169,7 +169,7 @@
         }
 
         &__card {
-            @include flex-column;
+            @include flexColumn;
             @include gap(15px);
             border-radius: 20px;
             background: #FFFFFF;
@@ -193,8 +193,8 @@
             }
 
             &__info {
-                @include flex-row;
-                @include flex-space-between;
+                @include flexRow;
+                @include flexSpaceBetween;
                 @include gap(16px);
 
                 &__title {
@@ -219,8 +219,8 @@
     }
 
     .section_faq {
-        @include flex-column;
-        @include flex-center;
+        @include flexColumn;
+        @include flexCenter;
         @include gap(30px);
         background-color: #FFFFFF;
         border-radius: 20px;

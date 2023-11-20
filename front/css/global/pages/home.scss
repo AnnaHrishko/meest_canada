@@ -73,7 +73,7 @@
 
         @include maxWidth1024() {
             width: calc(100% - 30px);
-            flex-wrap: wrap;
+            flexWrap: wrap;
             justify-content: space-between;
             flex-direction: column;
         }
@@ -246,11 +246,11 @@
 
     .services {
         display: flex;
-        flex-wrap: wrap;
+        flexWrap: wrap;
         justify-content: space-between;
 
         @include maxWidth1024() {
-            flex-wrap: nowrap;
+            flexWrap: nowrap;
             overflow-x: scroll;
         }
 

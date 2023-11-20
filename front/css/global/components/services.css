@@ -21,11 +21,11 @@
   row-gap: 30px;
   column-gap: 34px;
   display: flex;
-  flex-wrap: wrap;
+  flexWrap: wrap;
 }
 @media (max-width: 1024px) {
   .section-services .services {
-    flex-wrap: nowrap;
+    flexWrap: nowrap;
     column-gap: 10px;
   }
 }
@@ -58,6 +58,7 @@
 .section-services .services-item-img img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 @media (max-width: 1024px) {
   .section-services .services-item-img {
@@ -70,6 +71,7 @@
   .section-services .services-item-img img {
     width: 100%;
     height: auto;
+    object-fit: contain;
   }
 }
 .section-services .services-item-title {

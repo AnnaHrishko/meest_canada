@@ -2,7 +2,7 @@
 @import "~intl-tel-input/build/css/intlTelInput.min.css";
 
 .iti {
-    @include flex-row;
+    @include flexRow;
     color: #1B2B3C;
     font-family: Montserrat;
     font-size: 14px;

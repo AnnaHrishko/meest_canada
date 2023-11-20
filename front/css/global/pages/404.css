@@ -71,7 +71,7 @@
 @media screen and (max-width: 1024px) {
   .section-intro-links {
     width: calc(100% - 30px);
-    flex-wrap: wrap;
+    flexWrap: wrap;
     justify-content: space-between;
     flex-direction: column;
   }
@@ -241,12 +241,12 @@
 }
 .section-services .services {
   display: flex;
-  flex-wrap: wrap;
+  flexWrap: wrap;
   justify-content: space-between;
 }
 @media screen and (max-width: 1024px) {
   .section-services .services {
-    flex-wrap: nowrap;
+    flexWrap: nowrap;
     overflow-x: scroll;
   }
 }

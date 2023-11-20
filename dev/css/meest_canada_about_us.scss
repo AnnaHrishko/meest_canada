@@ -64,7 +64,7 @@
     margin-bottom: 30px;
     @include maxWidth991(){
         flex-flow: row;
-        flex-wrap: wrap;
+        flexWrap: wrap;
         margin-bottom: 10px;
     }
     &__tag{

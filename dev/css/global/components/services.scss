@@ -23,10 +23,10 @@
     .services {
         @include gap(30px, 34px);
         display: flex;
-        flex-wrap: wrap;
+        flexWrap: wrap;
 
         @include mobile {
-            flex-wrap: nowrap;
+            flexWrap: nowrap;
             column-gap: 10px;
         }
 
@@ -37,7 +37,7 @@
         }
 
         &-item {
-            @include flex-column;
+            @include flexColumn;
             @include flexWidth(calc(33% - 19px));
             border-radius: 20px;
             background: #EFF1F4;

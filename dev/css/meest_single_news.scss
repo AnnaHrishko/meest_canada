@@ -15,9 +15,9 @@
   }
 }
 .center_div{
-  @include flex-center();
+  @include flexCenter();
 }
-.flex-wrapper{
+.flexWrapper{
   width: 80%;
   display: flex;
   @include maxWidth1290(){

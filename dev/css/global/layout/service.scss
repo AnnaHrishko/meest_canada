@@ -13,18 +13,18 @@
 
     .service_page {
         &__wrapper {
-            @include flex-row;
+            @include flexRow;
             @include gap(0, 30px);
             align-items: flex-start;
 
             @include mobile {
-                @include flex-column;
+                @include flexColumn;
                 align-items: stretch;
             }
         }
 
         &__column {
-            @include flex-column;
+            @include flexColumn;
 
             &--content {
                 @include gap(30px);
@@ -56,7 +56,7 @@
         }
 
         &__menu {
-            @include flex-column;
+            @include flexColumn;
             @include gap(15px);
             margin-top: 21px;
 
@@ -82,7 +82,7 @@
             }
 
             &__items {
-                @include flex-column;
+                @include flexColumn;
                 @include gap(10px);
 
                 @include mobile {
@@ -91,8 +91,8 @@
             }
 
             &__item {
-                @include flex-row;
-                @include flex-space-between;
+                @include flexRow;
+                @include flexSpaceBetween;
                 padding: 17px 18px 18px 20px;
                 border-radius: 14px;
                 background: #F8F9FA;

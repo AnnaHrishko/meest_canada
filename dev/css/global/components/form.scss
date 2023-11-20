@@ -2,21 +2,21 @@
 @import "../templates";
 
 .form {
-    @include flex-column;
+    @include flexColumn;
     @include gap(15px);
 
     &__row {
-        @include flex-row;
+        @include flexRow;
         @include gap(15px, 21px);
         align-items: flex-start;
 
         @include mobile {
-            @include flex-column;
+            @include flexColumn;
             align-items: stretch;
         }
 
         &__col {
-            @include flex-column;
+            @include flexColumn;
             @include gap(7px);
             flex-grow: 1;
             min-width: 100%;
@@ -57,7 +57,7 @@
 
         &--2_col#{&}--2_col--mobile,
         &--3_col#{&}--3_col--mobile {
-            @include flex-row;
+            @include flexRow;
         }
 
         &--2_col#{&}--2_col--mobile &__col {
@@ -131,12 +131,12 @@
     }
 
     &__input {
-        @include flex-column;
+        @include flexColumn;
         @include gap(5px);
         flex-grow: 1;
 
         &__group {
-            @include flex-row;
+            @include flexRow;
             align-items: flex-start;
 
             &__before,
@@ -190,7 +190,7 @@
     }
 
     &__checkbox {
-        @include flex-center;
+        @include flexCenter;
         @include squareFlex(30px);
         display: inline-flex;
         cursor: pointer;
@@ -229,7 +229,7 @@
         }
 
         &__group {
-            @include flex-row;
+            @include flexRow;
             @include gap(10px);
 
             &__text {
@@ -260,7 +260,7 @@
     }
 
     &__error {
-        @include flex-row;
+        @include flexRow;
         @include gap(3px);
         padding: 0 10px;
         color: #E40137;

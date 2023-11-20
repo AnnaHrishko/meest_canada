@@ -122,7 +122,7 @@
     margin-bottom: 10px;
   }
   .world-contacts-block__countries .country-sec .content .meest-contact-wrap .bottom .contacts .phones-link {
-    flex-wrap: wrap;
+    flexWrap: wrap;
   }
 }
 @media (max-width: 768px) {

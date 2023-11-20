@@ -606,10 +606,10 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
 }
 .swiper-grid > .swiper-wrapper {
-  flex-wrap: wrap;
+  flexWrap: wrap;
 }
 .swiper-grid-column > .swiper-wrapper {
-  flex-wrap: wrap;
+  flexWrap: wrap;
   flex-direction: column;
 }
 .swiper-fade.swiper-free-mode .swiper-slide {

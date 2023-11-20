@@ -239,7 +239,7 @@
 @media screen and (max-width: 1024px) {
   .offices-map-body {
     height: 100%;
-    flex-wrap: wrap;
+    flexWrap: wrap;
   }
 }
 .offices-map-sidebar {

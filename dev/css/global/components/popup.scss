@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .popup {
-    @include flex-center;
+    @include flexCenter;
     position: fixed;
     display: none;
     top: 0;
