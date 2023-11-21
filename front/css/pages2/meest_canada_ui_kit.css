@@ -3008,7 +3008,7 @@ body {
   transform: translate(-50%, -50%);
   width: 14px;
   height: 10px;
-  background: url(../img/pages2/icon_check.svg);
+  background: url(../../img/pages2/icon_check.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -3051,7 +3051,7 @@ body {
   margin-left: 15px !important;
   width: 12px !important;
   height: 7px !important;
-  background-image: url(../img/arrow_phone_select.svg);
+  background-image: url(../../img/arrow_phone_select.svg);
   background-repeat: no-repeat;
   border-left: unset !important;
   border-right: unset !important;

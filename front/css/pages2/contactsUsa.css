@@ -137,13 +137,22 @@
 .contacts-info-wrapper__img-part .img:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/pages2/usa_icon.svg");
+  top: -12px;
+  left: -12px;
+  background-image: url(../../img/pages2/usa_icon.svg);
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
   background-size: 50px 50px;
+}
+@media screen and (max-width: 1024px) {
+  .contacts-info-wrapper__img-part .img:before {
+    top: -3px;
+    left: -3px;
+    width: 35px;
+    height: 35px;
+    background-size: 35px 35px;
+  }
 }
 .contacts-info-wrapper__img-part .img img {
   width: 100%;
@@ -157,8 +166,9 @@
   border-radius: 20px;
   background: #F8F9FA;
   padding: 60px 40px 30px;
-  background-image: url("../img/pages2/bcg_send_wrap.png");
+  background-image: url(../../img/pages2/bcg_send_wrap.png);
   background-repeat: no-repeat;
+  background-size: 100%;
   background-position: top left;
 }
 .contacts-info-wrapper .send-instrctn-wrap.mobile {
@@ -207,8 +217,8 @@
 }
 @media screen and (max-width: 1024px) {
   .contacts-info-wrapper__bottom {
-    margin-top: 0;
     width: 100%;
+    margin-top: 0;
     margin-right: 0;
   }
 }

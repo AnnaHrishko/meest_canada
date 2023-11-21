@@ -67,10 +67,10 @@
         <div class="partners-bottom">
             <div class="partners-bottom__write-to-us">
                 <h2 class="main-title">Write to us</h2>
-                <form action="#" class="form-write-to-us">
+                <form action="#" class="form-become-partner">
                     <div class="form-row flex_direct">
                         <label for="" class="label">I represent</label>
-                        <select name="city" id="" class="select" autocomplete="off">
+                        <select name="city" id="" class="select" name="represent" autocomplete="off">
                             <option value="" selected disabled>Місто</option>
                             <option value="Ukraine">Київ</option>
                             <option value="Ukraine">Одеса</option>
@@ -79,15 +79,15 @@
                     <div class="form-flex d-flex ai">
                         <div class="form-row flex_direct">
                             <label for="" class="label">I am looking for</label>
-                            <select name="city" id="" class="select" autocomplete="off">
+                            <select name="city" id="" class="select" name="looking-for" autocomplete="off">
                                 <option value="" selected disabled>Місто</option>
                                 <option value="Ukraine">Київ</option>
                                 <option value="Ukraine">Одеса</option>
                             </select>
                         </div>
                         <div class="form-row flex_direct">
-                            <label for="" class="label">My location</label>
-                            <input type="text" class="input" placeholder="" name="">
+                            <label for="" class="label">My location</label> 
+                            <input type="text" class="input" placeholder="" name="location" autocomplete="off">
                         </div>
                     </div>						
                     <div class="flex-input-row3">
@@ -101,15 +101,15 @@
                         </label>
                         <label for="lastN-input" class="form-row">
                             <span class="label">Email</span>
-                            <input type="text" class="input" placeholder="Email" name="last_name" autocomplete="off" id="lastN-input">
+                            <input type="text" class="input" placeholder="Email" name="email" autocomplete="off" id="lastN-input">
                         </label>
                     </div>
                     <label for="textarea-input" class="input-row">
                         <span class="name-input">Message</span>
                         <textarea name="" id="textarea-input" cols="30" rows="10"></textarea>
                     </label>
-                    <label for="checkbox-meest" class="custom_chekbox canada">
-                        <input type="checkbox" autocomplete="off" id="checkbox-meest">
+                    <label for="pr-policy-partner" class="custom_chekbox canada">
+                        <input type="checkbox" autocomplete="off" id="pr-policy-partner" name="pr-policy-partner">
                          <span class="checkmark"></span>
                          <span class="text">I consent to having Meest Corporation store my submitted information so they can respond to my inquiry, and grant a permission to contact me using contact details provided, as well as to share my information with other companies within Meest Group and any third-party service providers. I understand that I can revoke my consent by sending an email to <a href="#">info.canada@meest.com.</a></span>
                     </label>
@@ -135,6 +135,7 @@
         </div>
     </div>
     <script src="../js/jq.js"></script>
+    <script src="../js/script-become-partner.js"></script>
 	<script src="../js/jquery.mask.min.js"></script>
 	<script src="../js/jquery.validate.min.js"></script>
 	<script src="../js/select2.min.js"></script>
