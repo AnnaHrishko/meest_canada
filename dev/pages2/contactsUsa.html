@@ -11,15 +11,10 @@
 <body>
     <div class="container-inner">
         <section class="contacts-usa-sec">
-            <div class="breadcrumbs">
-                <img class="breadcrumbs__img--mobile" src="../img/components/breadcrumbs/arrow-mobile.svg" alt="">
-                <a href="#">home</a>
-                <img class="breadcrumbs__img--desktop" src="../img/components/breadcrumbs/arrow.svg" alt="">
-                 <span>hghbj</span>
-            </div>
-            <div>
+             <!--=include ../components/breadcrumbs.html -->  
+            <div class="contacts-usa-sec__center-div">
                 <h1 class="name-page-canada">Contacts USA</h1>
-                <p>Choose your state</p>
+                <p class="subheading-cntcts">Choose your state</p>
                 <ul class="navigation-tabs">
                     <li class="navigation-tabs__tab active">
                         <a href="#">USA - Northeast & South</a>
@@ -32,12 +27,101 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <div class="__top">
-
+            <div class="contacts-info-wrapper">
+                <div class="contacts-info-wrapper__top">
+                    <div class="urban-downsizing-wrap">
+                        <h3 class="fs20">USA - Northeast & South</h3>
+                        <div class="urban-downsizing-wrap__text">
+                            <span><strong>(NJ)</strong> - New Jersey</span>
+                            <span><strong>(NY)</strong> - New York</span>
+                            <span><strong>(PA)</strong> - Pennsylvania</span>
+                            <span><strong>(RI)</strong> - Rhode Island</span>
+                            <span><strong>(CT)</strong> - Connecticut</span>
+                            <span><strong>(MA)</strong> - Massachusetts</span>
+                            <span><strong>(NH)</strong> - New Hampshire</span>
+                            <span><strong>(VT)</strong> - Vermont</span>
+                            <span><strong>(ME)</strong> - Maine</span>
+                            <span><strong>(MD)</strong> - Maryland</span>
+                            <span><strong>(DC)</strong> - District of Columbia</span>
+                            <span><strong>(VA)</strong> - Virginia  </span>
+                            <span><strong>(NH)</strong> - New Hampshire</span>
+                            <span><strong>(VT)</strong> - Vermont</span>
+                            <span><strong>(ME)</strong> - Maine</span>
+                            <span><strong>(MD)</strong> - Maryland</span>
+                            <span><strong>(DC)</strong> - District of Columbia</span>
+                            <span><strong>(VA)</strong> - Virginia</span>
+                        </div>
+                    </div>
+                    <div class="contacts-info-wrapper__img-part">
+                        <picture class="img">
+                            <source srcset="../img/pages2/map_usa.png" media="(max-width: 991px)">
+                            <img class="full-width" src="../img/pages2/map_usa.png" alt="" loading="lazy">        
+                        </picture>
+                        <div class="send-instrctn-wrap">
+                            <h3 class="fs20">Send your parcel to Ukraine with Meest America</h3>
+                            <p class="description">Drop off through the nearest FedEx office to you</p>
+                            <a href="" class="btn btn--arrow btn-blue-dark">
+                                <span>Instructions</span>
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.99898 7.04362C7.98946 7.32937 7.87439 7.60176 7.67543 7.8091L2.02751 13.6413C1.73581 13.9422 1.30442 14.0659 0.895824 13.966C0.487245 13.8659 0.163359 13.5575 0.0464929 13.1567C-0.0705502 12.7559 0.036972 12.3237 0.32867 12.0228L5.18992 7L0.328671 1.9772C0.0369708 1.67631 -0.0705497 1.24409 0.0464934 0.843287C0.163368 0.442484 0.487233 0.134129 0.895825 0.0340228C1.3044 -0.0658918 1.73579 0.0577812 2.02751 0.35867L7.67543 6.19091C7.89556 6.42003 8.01227 6.72793 7.99898 7.04395L7.99898 7.04362Z" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="__bottom">
-
+                <div class="contacts-info-wrapper__bottom">
+                    <h3 class="fs20">Meest-America Inc.</h3>
+                    <div class="contact-div">
+                        <span class="contact-div__name">Address</span>
+                        <a href="#" class="contact-div__link">New Jersey, USA, 600 Markley Street, Port Reading, NJ 07064</a>
+                    </div>
+                    <div class="contact-div">
+                        <span class="contact-div__name">Phone</span>
+                        <div class="contact-div__links">
+                            <a href="#" class="contact-div__link">+18626824224</a>
+                            <a href="#" class="contact-div__link">+380673735335</a>
+                            <a href="#" class="contact-div__link">+380503735335</a>
+                        </div>
+                    </div>
+                    <div class="contact-div">
+                        <span class="contact-div__name">Email</span>
+                        <a href="#" class="contact-div__link">info.usa@meest.com</a>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-div__name">Work hours</span>
+                        <p class="info-div__text">Monday – Friday: <span>8:00 АМ – 6:00 PM</span></p>
+                        <p class="info-div__text">Saturday: <span>Warehouse only (please check before coming  <a href="#">+1 732 410 1640)</a></span></p>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-div__name">Live Help</span>
+                        <p class="info-div__text">Monday – Friday: <span>9:00 AM - 6:00 PM</span></p>
+                    </div>
+                    <div class="info-div">
+                        <span class="info-div__name">For all parcel-related issues please call:</span>
+                        <p class="info-div__text">Monday – Friday: <span>9:00 AM - 6:00 PM</span></p>
+                    </div>
+                    <div class="contact-div">
+                        <span class="contact-div__name">For all parcel-related issues please call:</span>
+                        <div class="contact-div__links">
+                            <a href="#" class="contact-div__link">+1 862-68-24-224</a>
+                            <a href="#" class="contact-div__link">+38 067 37 35 335</a>
+                            <a href="#" class="contact-div__link">+38 050 37 35 335</a>
+                        </div>
+                    </div>
+                    <div class="contact-div">
+                        <span class="contact-div__name">For all financial and office-related questions please call:</span>
+                        <a href="#" class="contact-div__link">+1 732 634 15 17</a>
+                    </div>
+                </div>
+                <div class="send-instrctn-wrap mobile">
+                    <h3 class="fs20">Send your parcel to Ukraine with Meest America</h3>
+                    <p class="description">Drop off through the nearest FedEx office to you</p>
+                    <a href="" class="btn btn--arrow btn-blue-dark">
+                        <span>Instructions</span>
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.99898 7.04362C7.98946 7.32937 7.87439 7.60176 7.67543 7.8091L2.02751 13.6413C1.73581 13.9422 1.30442 14.0659 0.895824 13.966C0.487245 13.8659 0.163359 13.5575 0.0464929 13.1567C-0.0705502 12.7559 0.036972 12.3237 0.32867 12.0228L5.18992 7L0.328671 1.9772C0.0369708 1.67631 -0.0705497 1.24409 0.0464934 0.843287C0.163368 0.442484 0.487233 0.134129 0.895825 0.0340228C1.3044 -0.0658918 1.73579 0.0577812 2.02751 0.35867L7.67543 6.19091C7.89556 6.42003 8.01227 6.72793 7.99898 7.04395L7.99898 7.04362Z" fill="#fff"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>

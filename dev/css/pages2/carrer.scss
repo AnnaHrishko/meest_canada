@@ -1,0 +1,144 @@
+@import "../global/mixins2";
+.vacancies-town-wrap{
+    margin-bottom: 40px;
+    @include maxWidth1024(){
+        margin-bottom: 30px;
+    }
+    .main-title{
+        margin-bottom: 20px;
+    }
+}
+.vacancies-wrapper{
+    display: flex;
+    width: 100%;
+    @include maxWidth1024(){
+        max-width: 1024px;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+    }
+    &__row{
+        width: calc(100%/3 - 16.6px);
+        margin-right: 25px;
+        border-radius: 20px;
+        background: #F8F9FA;
+        padding: 30px 40px 35px 30px;
+        @include maxWidth1024(){
+            width: 70%;
+            flex: 0 0 auto;
+            padding: 25px 20px 25px 25px;
+            margin-right: 20px;
+        }
+        @include maxWidth425(){
+            width: 85%;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+        .title-vacancies{
+            color: #2361A9;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 23.8px */
+            letter-spacing: -0.17px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @include maxWidth1024(){
+                font-size: 14px;
+            }
+        }
+        .date{
+            color: #2361A9;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%; 
+            margin-bottom: 12px;
+            display: block;
+            @include maxWidth1024(){
+                font-size: 12px;
+            }
+        }
+        .d-flex{
+            margin-bottom: 30px;
+            @include maxWidth1024(){
+                margin-bottom: 20px;
+            }
+            .descr-vac-info{
+                &:first-of-type{
+                    margin-right: 20px;
+                    @include maxWidth425(){
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .btn{
+            svg{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.carrer-part{
+    border-radius: 20px;
+    background: #FFF;
+    padding: 40px;
+    @include maxWidth1024(){
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        border-radius: 0;
+        padding: 50px 0 20px 15px;
+    }
+}
+.carrer-offer-wrap{
+    display: flex;
+    margin-bottom: 30px;
+    @include maxWidth1024(){
+        flex-direction: column;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-bottom: 10px;
+    }
+    &__row{
+        width: calc(65% - 30px);
+        margin-right: 30px;
+        border-radius: 20px;
+        background: #FFF;
+        padding: 30px 40px 65px;
+        @include maxWidth1024(){
+            width: 100%;
+            margin-right: 0;
+            border-radius: 0;
+            margin-bottom: 10px;
+            padding: 40px 15px 30px;
+        }
+        .main-title{
+            margin-bottom: 20px;
+        }
+    }
+    &__send{
+        width: 35%;
+        border-radius: 20px;
+        background: #FFF;
+        padding: 30px 40px 40px;
+        @include maxWidth1024(){
+            width: 100%;
+            border-radius: 0;
+            padding: 40px 15px 30px;
+        }
+        .fs20{
+            margin-bottom: 10px;
+            @include maxWidth1024(){
+                margin-bottom: 15px;
+            }
+        }
+        .description{
+            margin-bottom: 20px;
+        }
+        .btn{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

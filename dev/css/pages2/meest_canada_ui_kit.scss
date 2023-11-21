@@ -17,6 +17,9 @@ body{
 .jc-sb{
   justify-content: space-between;
 }
+.ai-c{
+  align-items: center;
+}
 .bcg_light_blue{
   background: #DEEBF5;
 }
@@ -27,6 +30,9 @@ body{
     letter-spacing: 0.32px;
     text-transform: uppercase;
     color: #2361A9;
+    @include maxWidth1024(){
+      font-size: 20px;
+    }
 }
 .description{
     color: #606B77;
@@ -43,8 +49,8 @@ body{
       font-size: 12px;
       line-height: 18px;
     }
-  }
-  .main-title{
+}
+.main-title{
     color: #0056A4;
     font-size: 27px;
     font-style: normal;
@@ -56,8 +62,17 @@ body{
       font-size: 20px;
       line-height: 120%;
     }
-  }
-  .text_ul{
+}
+.fs20{
+  color: #1E579F;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 109%; /* 21.8px */
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+.text_ul{
     padding-left: 30px;
     &.number{
       padding-left: 20px;
@@ -109,8 +124,8 @@ body{
         }
       }
     }
-  }
-  .cards-wrapper{
+}
+.cards-wrapper{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -120,8 +135,8 @@ body{
       width: 100%;
       margin-left: 0;
     }
-  }
-  .card-row{
+}
+.card-row{
     width: calc(50% - 21px);
     margin-left: 21px;
     padding: 21px 31px 22px;
@@ -226,8 +241,8 @@ body{
             }
         }
     }
-  }
-  .navigation-tabs{
+}
+.navigation-tabs{
     display: flex;
     padding-left: 0;
     overflow-y: scroll;
@@ -304,8 +319,8 @@ body{
         text-decoration: none;
       }
     }
-  }
-  .main-card{
+}
+.main-card{
     padding: 26px 30px;
     background-color: #FFF;
     border-radius: 20px;
@@ -385,8 +400,8 @@ body{
             }
         }
     }
-  }
-  .page{
+}
+.page{
     .service_page{
       &__column{
         &--menu{
@@ -398,4 +413,254 @@ body{
         }
       }
     }
+}
+.custom_chekbox.canada{
+  margin: 20px 0 30px;
+	display: block;
+	position: relative;
+	padding-left: 40px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	input{
+		position: absolute;
+	  	opacity: 0;
+	  	cursor: pointer;
+	  	height: 0;
+	  	width: 0;
+	}
+  @include maxWidth991(){
+    .checkmark{
+      width: 26px;
+      height: 26px;
+    }
+    .text{
+        padding: unset;
+    }
   }
+	.checkmark {
+        position: absolute;
+        top: -3px;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+        border: 1px solid #D7D8D9;
+	    border-radius: 8px;
+	}
+	.text{
+		color: rgba(27, 43, 60, 0.50);
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 153.846% */
+        letter-spacing: 0.26px;
+        padding: unset;
+		a{
+			color: #0860C7;
+            font-weight: 700;
+		}
+	}
+}
+.custom_chekbox.canada input:checked ~ .checkmark{
+    background-color: rgba(35, 97, 169, 1);
+    border: unset;
+
+}
+.custom_chekbox.canada input:checked ~ .checkmark:after {
+    display: block;
+}
+.custom_chekbox.canada .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom_chekbox.canada .checkmark:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 10px;
+    background: url(../img/pages2/icon_check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.error{
+  font-size: 12px;
+  color: red;
+  display: block;
+}
+#phone-error{
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+#phone_sender-error{
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: unset!important;
+  border-right: 1px solid #D7D8D9;
+  padding: 0 3px 0 8px!important;
+}
+
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 109%;
+  letter-spacing: 0.02em;
+  color: #1B2B3C;
+  margin-left: 10px;
+}
+
+.iti__arrow {
+  margin-right: 10px;
+  margin-left: 15px!important;
+  width: 12px!important;
+  height: 7px!important;
+  background-image: url(../img/arrow_phone_select.svg);
+  background-repeat: no-repeat;
+  border-left: unset!important;
+  border-right: unset!important;
+  border-top: unset!important;
+}
+
+.iti {
+  display: block!important;
+}
+
+.iti__arrow--up {
+  border-bottom: unset!important;
+}
+
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+  border-right: 1px solid #D7D8D9;
+  padding: unset!important;
+}
+.top-wrapper{
+  border-radius: 20px;
+  background: #DEEBF5;
+  display: flex;
+  margin-bottom: 30px;
+  @include maxWidth1024(){
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    border-radius: unset;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  &.become_partner{
+    @include maxWidth1440(){
+      .top-wrapper__text{
+        width: calc(50% - 60px);
+        margin-right: 60px;
+      }
+      .top-wrapper__img{
+        padding-right: 0;
+      }
+    }
+    @include maxWidth1200(){
+      .top-wrapper__img{
+        align-items: flex-end;
+      }
+    }
+    @include maxWidth1024(){
+      background-color: transparent;
+      .top-wrapper__text{
+        background: #DEEBF5;
+        width: 100%;
+        margin-right: 0;
+      }
+      .top-wrapper__img{
+        background-color: #fff;
+      }
+    }
+  }
+  &.carrer{
+    .top-wrapper__text{
+      width: calc(50% - 60px);
+      margin-right: 60px;
+      @include maxWidth1024(){
+        width: 100%;
+        margin-right: 0;
+      }
+      .description{
+        margin-bottom: 20px;
+      }
+      .btn{
+        svg{
+          margin-left: 10px;
+        }
+      }
+      .breadcrumbs{
+        margin-bottom: 30px;
+      }
+    }
+    .top-wrapper__img{
+      align-items: end;
+      padding-right: 0;
+    }
+  }
+  &__text{
+      width: calc(50% - 170px);
+      margin-right: 170px;
+      padding: 26px 40px 80px;
+      @include maxWidth1024(){
+        width: 100%;
+        margin-right: 0;
+        padding: 30px 15px 25px;
+      }
+      .breadcrumbs{
+          margin-bottom: 50px;
+      }
+      .name-page-canada{
+          margin-bottom: 15px;
+      }
+  }
+  &__img{
+      width: 50%;
+      display: flex;
+      vertical-align: bottom;
+      padding-right: 45px;
+      @include maxWidth1024(){
+        width: 100%;
+        padding-right: 0;
+      }
+      img{
+          width: 100%;
+      }
+  }
+}
+.descr-vac-info{
+  display: flex;
+  align-items: center;
+  img{
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      @include maxWidth1024(){
+          width: 18px;
+          height: 18px;
+      }
+      @include maxWidth425(){
+          margin-right: 3px;
+      }
+  }
+  span{
+      color: #2361A9;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 135%;
+      @include maxWidth1024(){
+          font-size: 12px;
+      }
+      @include maxWidth425(){
+          font-size: 11px;
+      }
+  }
+}

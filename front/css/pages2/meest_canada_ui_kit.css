@@ -2490,6 +2490,10 @@ body {
   justify-content: space-between;
 }
 
+.ai-c {
+  align-items: center;
+}
+
 .bcg_light_blue {
   background: #DEEBF5;
 }
@@ -2501,6 +2505,11 @@ body {
   letter-spacing: 0.32px;
   text-transform: uppercase;
   color: #2361A9;
+}
+@media screen and (max-width: 1024px) {
+  .name-page-canada {
+    font-size: 20px;
+  }
 }
 
 .description {
@@ -2536,6 +2545,16 @@ body {
     font-size: 20px;
     line-height: 120%;
   }
+}
+
+.fs20 {
+  color: #1E579F;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 109%; /* 21.8px */
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
 }
 
 .text_ul {
@@ -2914,5 +2933,277 @@ body {
 @media screen and (max-width: 1024px) {
   .page .service_page__column--menu .breadcrumbs {
     display: none;
+  }
+}
+
+.custom_chekbox.canada {
+  margin: 20px 0 30px;
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.custom_chekbox.canada input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+@media screen and (max-width: 991px) {
+  .custom_chekbox.canada .checkmark {
+    width: 26px;
+    height: 26px;
+  }
+  .custom_chekbox.canada .text {
+    padding: unset;
+  }
+}
+.custom_chekbox.canada .checkmark {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 1px solid #D7D8D9;
+  border-radius: 8px;
+}
+.custom_chekbox.canada .text {
+  color: rgba(27, 43, 60, 0.5);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.26px;
+  padding: unset;
+}
+.custom_chekbox.canada .text a {
+  color: #0860C7;
+  font-weight: 700;
+}
+
+.custom_chekbox.canada input:checked ~ .checkmark {
+  background-color: rgb(35, 97, 169);
+  border: unset;
+}
+
+.custom_chekbox.canada input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom_chekbox.canada .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom_chekbox.canada .checkmark:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 10px;
+  background: url(../img/pages2/icon_check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  display: block;
+}
+
+#phone-error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+#phone_sender-error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: unset !important;
+  border-right: 1px solid #D7D8D9;
+  padding: 0 3px 0 8px !important;
+}
+
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 109%;
+  letter-spacing: 0.02em;
+  color: #1B2B3C;
+  margin-left: 10px;
+}
+
+.iti__arrow {
+  margin-right: 10px;
+  margin-left: 15px !important;
+  width: 12px !important;
+  height: 7px !important;
+  background-image: url(../img/arrow_phone_select.svg);
+  background-repeat: no-repeat;
+  border-left: unset !important;
+  border-right: unset !important;
+  border-top: unset !important;
+}
+
+.iti {
+  display: block !important;
+}
+
+.iti__arrow--up {
+  border-bottom: unset !important;
+}
+
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+  border-right: 1px solid #D7D8D9;
+  padding: unset !important;
+}
+
+.top-wrapper {
+  border-radius: 20px;
+  background: #DEEBF5;
+  display: flex;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .top-wrapper {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    border-radius: unset;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .top-wrapper.become_partner .top-wrapper__text {
+    width: calc(50% - 60px);
+    margin-right: 60px;
+  }
+  .top-wrapper.become_partner .top-wrapper__img {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .top-wrapper.become_partner .top-wrapper__img {
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-wrapper.become_partner {
+    background-color: transparent;
+  }
+  .top-wrapper.become_partner .top-wrapper__text {
+    background: #DEEBF5;
+    width: 100%;
+    margin-right: 0;
+  }
+  .top-wrapper.become_partner .top-wrapper__img {
+    background-color: #fff;
+  }
+}
+.top-wrapper.carrer .top-wrapper__text {
+  width: calc(50% - 60px);
+  margin-right: 60px;
+}
+@media screen and (max-width: 1024px) {
+  .top-wrapper.carrer .top-wrapper__text {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.top-wrapper.carrer .top-wrapper__text .description {
+  margin-bottom: 20px;
+}
+.top-wrapper.carrer .top-wrapper__text .btn svg {
+  margin-left: 10px;
+}
+.top-wrapper.carrer .top-wrapper__text .breadcrumbs {
+  margin-bottom: 30px;
+}
+.top-wrapper.carrer .top-wrapper__img {
+  align-items: end;
+  padding-right: 0;
+}
+.top-wrapper__text {
+  width: calc(50% - 170px);
+  margin-right: 170px;
+  padding: 26px 40px 80px;
+}
+@media screen and (max-width: 1024px) {
+  .top-wrapper__text {
+    width: 100%;
+    margin-right: 0;
+    padding: 30px 15px 25px;
+  }
+}
+.top-wrapper__text .breadcrumbs {
+  margin-bottom: 50px;
+}
+.top-wrapper__text .name-page-canada {
+  margin-bottom: 15px;
+}
+.top-wrapper__img {
+  width: 50%;
+  display: flex;
+  vertical-align: bottom;
+  padding-right: 45px;
+}
+@media screen and (max-width: 1024px) {
+  .top-wrapper__img {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.top-wrapper__img img {
+  width: 100%;
+}
+
+.descr-vac-info {
+  display: flex;
+  align-items: center;
+}
+.descr-vac-info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 1024px) {
+  .descr-vac-info img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .descr-vac-info img {
+    margin-right: 3px;
+  }
+}
+.descr-vac-info span {
+  color: #2361A9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+}
+@media screen and (max-width: 1024px) {
+  .descr-vac-info span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .descr-vac-info span {
+    font-size: 11px;
   }
 }
