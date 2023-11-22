@@ -75,68 +75,120 @@
         }
     }
 }
-.shipping-row{
+.cards-wrapper{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: calc(100% + 21px);
+    margin-left: -21px;
+    @include maxWidth1200(){
+      width: 100%;
+      margin-left: 0;
+    }
+}
+.card-row{
+    width: calc(50% - 21px);
+    margin-left: 21px;
+    padding: 21px 31px 22px;
     border-radius: 20px;
     background: #FFF;
-    padding: 20px 30px 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    @include maxWidth1024(){
-        &:last-of-type{
+    margin-bottom: 20px;
+    position: relative;
+    &:last-of-type{
+        @include maxWidth1024(){
             margin-bottom: 30px;
         }
     }
-    @include maxWidth991(){
-        align-items: start;
-        padding: 20px 20px 20px 25px;
+    @include maxWidth1200(){
+      width: 100%;
+      margin-left: 0;
+    }
+    @include maxWidth1024(){
+        padding: 28px 25px 20px;
+        margin-bottom: 10px;
+    }
+    // &__inner{
+    //   width: 70%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   height: 100%;
+    // }
+    &__img{
+        width: 150px;
+        height: 85px;
+        margin-bottom: 18px;
+        @include maxWidth1024(){
+            width: 120px;
+            height: 50px;
+        }
     }
     &__text{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        @include maxWidth991(){
-            flex-direction: column;
-            align-items: start;
-        }
-        img{
-            width: 116px;
-            height: 30px;
-            margin-right: 50px;
-            @include maxWidth1200(){
-                margin-right: 20px;
+      width: 70%;
+      @include maxWidth1440(){
+        width: 85%;
+      }
+      @include maxWidth1200(){
+        width: 100%;
+      }
+      .card-row__bottom{
+            @include maxWidth1024(){
+                display: none;
             }
-            @include maxWidth991(){
-                margin-bottom: 15px;
-                margin-right: 0;
-            }
-        }
-        h3{
-            color: #2361A9;
-            font-size: 17px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 109%; /* 18.53px */
-            letter-spacing: -0.17px;
-            text-transform: uppercase;
-            @include maxWidth991(){
-                font-size: 15px;
-                line-height: 135%; /* 20.25px */
-                letter-spacing: 0.3px;
+            .btn{
+                display: flex;
             }
         }
     }
-    &__aroow-img{
-        width: 17px;
-        height: 10px;
+    &__heading{
+        color: #2361A9;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%; /* 27px */
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
         @include maxWidth991(){
-            width: 6px;
-            height: 10px;
+          font-size: 17px;
+          line-height: 135%; /* 22.95px */
+          letter-spacing: 0.34px;
         }
-        img{
-            width: 100%;
-            height: 100%;
+    }
+    .description{
+        margin-bottom: 15px;
+        @include maxWidth1024(){
+            margin-bottom: 0;
+        }
+    }
+    .btn{
+        display: none;
+        @include maxWidth1440(){
+            font-size: 12px;
+        }
+        @include maxWidth1200(){
+            font-size: 11px;
+        }
+        @include maxWidth1024(){
+            display: flex;
+        }
+        &.link{
+            @include maxWidth1024(){
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        svg{
+            @include maxWidth1440(){
+            margin-left: 25px;
+            }
+            @include maxWidth1200(){
+                margin-left: 20px;
+            }
+            @include maxWidth1024(){
+                margin-left: 10px;
+            }
         }
     }
 }
