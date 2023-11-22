@@ -1,10 +1,14 @@
 
-// $(document).ready(function() {
-//     $('.select').select2();
-// });
-// $(".select").select2().change(function() {
-//     $(this).valid();
-// });
+
+
+$(document).ready(function() {
+    $('.select').select2();
+});
+$(document).on('change', '.select', function() {
+  $(this).valid();
+});
+
+
 $(function() {
     $.validator.addMethod("emailRegex", function(value, element) {
         return this.optional(element) || /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/i.test(value);

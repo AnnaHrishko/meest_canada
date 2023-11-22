@@ -11,6 +11,9 @@ $('.countries-wrapper__country-sec').click(function() {
 $(document).ready(function() {
     $('.select').select2();
 });
+$(document).on('change', '.select', function() {
+  $(this).valid();
+});
 
 $('.phone').each(function(){
     window.intlTelInput(this, {

@@ -267,6 +267,13 @@
             display: block;
             margin-bottom: 24px;
             position: relative;
+            &.flex_direct{
+                display: flex;
+                flex-direction: column;
+                .error{
+                    order: 3;
+                }
+            }
             @include maxWidth1024(){
                 margin-bottom: 15px;
             }
@@ -281,6 +288,7 @@
             }
             .input{
                 // display: block;
+                outline: none;
                 border: 1px solid #D7D8D9;
                 border-radius: 100px;
                 padding: 14px 20px 14px;
@@ -290,6 +298,15 @@
                 line-height: 109%;
                 letter-spacing: 0.02em;
                 color: rgba(27, 43, 60, 0.6);
+                &.error{
+                    border: 1px solid #E40137;
+                }
+                &.valid{
+                    background-image: url(../../img/pages2/succsec_circle.svg);
+                    background-repeat: no-repeat;
+                    background-size: 20px 20px;
+                    background-position: 95% center;
+                }
                 &::placeholder{
                     font-weight: 500;
                     font-size: 14px;
@@ -313,6 +330,15 @@
                 width: 100%;
                 height: 48px;
                 padding: 0 18px;
+                &.error ~ .select2-container--default .select2-selection--single{
+                    border: 1px solid #E40137;
+                }
+                &.valid ~ .select2-container--default .select2-selection--single{
+                    background-image: url(../../img/pages2/succsec_circle.svg);
+                    background-repeat: no-repeat;
+                    background-size: 20px 20px;
+                    background-position: 92% center;
+                }
               }
               option{
                 font-weight: 500;
@@ -482,6 +508,123 @@ body .select2-container{
     position: absolute;
     left: 0;
     top: 100%;
+  }
+  .custom_chekbox.canada{
+    margin: 20px 0 30px;
+      display: block;
+      position: relative;
+      padding-left: 40px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      input{
+          position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+      }
+    @include maxWidth991(){
+      .checkmark{
+        width: 26px;
+        height: 26px;
+      }
+      .text{
+          padding: unset;
+      }
+    }
+      .checkmark {
+          position: absolute;
+          top: -3px;
+          left: 0;
+          height: 30px;
+          width: 30px;
+          background-color: transparent;
+          border: 1px solid #D7D8D9;
+          border-radius: 8px;
+      }
+      .text{
+          color: rgba(27, 43, 60, 0.50);
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px; /* 153.846% */
+          letter-spacing: 0.26px;
+          padding: unset;
+          a{
+              color: #0860C7;
+              font-weight: 700;
+          }
+      }
+  }
+  .custom_chekbox.canada input:checked ~ .checkmark{
+      background-color: rgba(35, 97, 169, 1);
+      border: unset;
+  
+  }
+  .custom_chekbox.canada input:checked ~ .checkmark:after {
+      display: block;
+  }
+  .custom_chekbox.canada .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+  .custom_chekbox.canada .checkmark:after {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 10px;
+      background: url(../../img/pages2/icon_check.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  .error{
+    font-size: 12px;
+    color: red;
+    display: block;
+  }
+  .iti--separate-dial-code .iti__selected-flag {
+    background-color: unset!important;
+    border-right: 1px solid #D7D8D9;
+    padding: 0 3px 0 8px!important;
+  }
+  
+  .iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    color: #1B2B3C;
+    margin-left: 10px;
+  }
+  
+  .iti__arrow {
+    margin-right: 10px;
+    margin-left: 15px!important;
+    width: 12px!important;
+    height: 7px!important;
+    background-image: url(../../img/arrow_phone_select.svg);
+    background-repeat: no-repeat;
+    border-left: unset!important;
+    border-right: unset!important;
+    border-top: unset!important;
+  }
+  
+  .iti {
+    display: block!important;
+  }
+  
+  .iti__arrow--up {
+    border-bottom: unset!important;
+  }
+  
+  .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+    border-right: 1px solid #D7D8D9;
+    padding: unset!important;
   }
   
   

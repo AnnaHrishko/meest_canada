@@ -1,4 +1,71 @@
 @import "../global/mixins2";
+.top-wrapper{
+    border-radius: 20px;
+    background: #DEEBF5;
+    display: flex;
+    margin-bottom: 30px;
+    @include maxWidth1024(){
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      border-radius: unset;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    &.carrer{
+      .top-wrapper__text{
+        width: calc(50% - 60px);
+        margin-right: 60px;
+        @include maxWidth1024(){
+          width: 100%;
+          margin-right: 0;
+        }
+        .description{
+          margin-bottom: 20px;
+        }
+        .btn{
+          svg{
+            margin-left: 10px;
+          }
+        }
+        .breadcrumbs{
+          margin-bottom: 30px;
+        }
+      }
+      .top-wrapper__img{
+        align-items: end;
+        padding-right: 0;
+      }
+    }
+    &__text{
+        width: calc(50% - 170px);
+        margin-right: 170px;
+        padding: 26px 40px 80px;
+        @include maxWidth1024(){
+          width: 100%;
+          margin-right: 0;
+          padding: 30px 15px 25px;
+        }
+        .breadcrumbs{
+            margin-bottom: 50px;
+        }
+        .name-page-canada{
+            margin-bottom: 15px;
+        }
+    }
+    &__img{
+        width: 50%;
+        display: flex;
+        vertical-align: bottom;
+        padding-right: 45px;
+        @include maxWidth1024(){
+          width: 100%;
+          padding-right: 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
+  }
 .vacancies-town-wrap{
     margin-bottom: 40px;
     @include maxWidth1024(){
@@ -142,3 +209,85 @@
         }
     }
 }
+.text_ul{
+    padding-left: 30px;
+    &.number{
+      padding-left: 20px;
+      li{
+        margin-bottom: 0;
+        list-style-type: demical;
+        &:before{
+          display: none;
+        }
+      }
+    }
+    li{
+      list-style: none;
+      color: #606B77;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px; /* 157.143% */
+      letter-spacing: 0.28px;
+      margin-bottom: 20px;
+      position: relative;
+      @include maxWidth991(){
+        font-size: 12px;
+        line-height: 18px; 
+        margin-bottom: 10px;
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      a{
+        font-weight: 600;
+        color: #2361A9;
+      }
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: -30px;
+        // transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 5px solid #2361A9;
+        @include maxWidth991(){
+            width: 5px;
+            height: 5px;
+        }
+      }
+    }
+}
+.descr-vac-info{
+    display: flex;
+    align-items: center;
+    img{
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        @include maxWidth1024(){
+            width: 18px;
+            height: 18px;
+        }
+        @include maxWidth425(){
+            margin-right: 3px;
+        }
+    }
+    span{
+        color: #2361A9;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 135%;
+        @include maxWidth1024(){
+            font-size: 12px;
+        }
+        @include maxWidth425(){
+            font-size: 11px;
+        }
+    }
+  }

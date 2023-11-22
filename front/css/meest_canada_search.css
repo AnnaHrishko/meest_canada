@@ -1160,7 +1160,7 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
   }
 }
 .btn svg {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .btn--arrow {
   display: flex;

@@ -1,5 +1,79 @@
-
 @import "../global/mixins2";
+.main-card{
+    padding: 26px 30px;
+    background-color: #FFF;
+    border-radius: 20px;
+    // margin-bottom: 20px;
+    @include maxWidth1024(){
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        border-radius: 0;
+        padding: 30px 15px 25px;
+        flex-direction: column;
+    }
+    &.eCom{
+      .main-card__f-wrap{
+        margin-bottom: 0;
+      }
+    }
+    .breadcrumbs{
+        display: none;
+        margin-bottom: 20px;
+        @include maxWidth1024(){
+          display: flex;
+        }
+    }
+    &__f-wrap{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      @include maxWidth1024(){
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+    &__inner{
+        display: flex;
+    }
+    &__icon{
+      width: 150px;
+      height: 85px;
+      display: block;
+      margin-right: 25px;
+      @include maxWidth1024(){
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    &__img{
+        width: calc(30% - 10px);
+        margin-right: 10px;
+        @include maxWidth1024(){
+          width: 175px;
+          height: 110px;
+          margin-right: 0;
+          margin-bottom: 18px;
+        }
+        img{
+          width: 100%;
+        }
+    }
+    &__text{
+        width: 70%;
+        @include maxWidth1024(){
+          width: 100%;
+        }
+        .main-title{
+            margin-bottom: 10px;
+        }
+        .description{
+            width: 60%;
+            @include maxWidth1200(){
+              width: 100%;
+            }
+        }
+    }
+}
 .cards-wrapper{
     display: flex;
     flex-flow: row;
@@ -9,7 +83,7 @@
     @include maxWidth1200(){
       width: 100%;
       margin-left: 0;
-    }     
+    }
 }
 .card-row{
     width: calc(50% - 21px);
@@ -115,86 +189,5 @@
                 margin-left: 10px;
             }
         }
-    }       
-}
-.main-card{
-    padding: 26px 30px;
-    background-color: #FFF;
-    border-radius: 20px;
-    // margin-bottom: 20px;
-    @include maxWidth1024(){
-        width: calc(100% + 30px);
-        margin-left: -15px;
-        border-radius: 0;
-        padding: 30px 15px 25px;
-        flex-direction: column;
     }
-    &.navgtn{
-        padding: 35px 40px 0;
-        @include maxWidth1024(){
-            padding: 30px 15px 0;
-        }
-    }
-    &.eCom{
-      .main-card__f-wrap{
-        margin-bottom: 0;
-      }
-    }
-    .breadcrumbs{
-        display: none;
-        margin-bottom: 20px;
-        @include maxWidth1024(){
-          display: flex;
-        }
-    }
-    &__f-wrap{
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      @include maxWidth1024(){
-        flex-direction: column;
-        align-items: start;
-      }
-    }
-    &__inner{
-        display: flex;
-    }
-    &__icon{
-      width: 150px;
-      height: 85px;
-      display: block;
-      margin-right: 25px;
-      @include maxWidth1024(){
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-    }
-    &__img{
-        width: calc(30% - 10px);
-        margin-right: 10px;
-        @include maxWidth1024(){
-          width: 175px;
-          height: 110px;
-          margin-right: 0;
-          margin-bottom: 18px;
-        }
-        img{
-          width: 100%;
-        }
-    }
-    &__text{
-        width: 70%;
-        @include maxWidth1024(){
-          width: 100%;
-        }
-        .main-title{
-            margin-bottom: 10px;
-        }
-        .description{
-            width: 60%;
-            @include maxWidth1200(){
-              width: 100%;
-            }
-        }
-    }      
 }
