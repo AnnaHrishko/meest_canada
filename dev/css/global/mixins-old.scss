@@ -4,8 +4,38 @@
     }
 }
 
+@mixin maxWidth1290() {
+    @media screen and (max-width: 1290px) {
+        @content;
+    }
+}
+
+@mixin maxWidth1240() {
+    @media screen and (max-width: 1240px) {
+        @content;
+    }
+}
+
 @mixin maxWidth1200() {
     @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin maxWidth1150() {
+    @media screen and (max-width: 1150px) {
+        @content;
+    }
+}
+
+@mixin maxWidth1055() {
+    @media screen and (max-width: 1055px) {
+        @content;
+    }
+}
+
+@mixin minWidth1025() {
+    @media screen and (min-width: 1025px) {
         @content;
     }
 }
@@ -18,6 +48,18 @@
 
 @mixin maxWidth991() {
     @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin maxWidth850() {
+    @media screen and (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin maxWidth768() {
+    @media screen and (max-width: 768px) {
         @content;
     }
 }
@@ -40,7 +82,7 @@
 }
 
 @mixin flexWrap {
-    flexWrap: wrap;
+    flex-wrap: wrap;
 }
 
 @mixin flexColumn {
