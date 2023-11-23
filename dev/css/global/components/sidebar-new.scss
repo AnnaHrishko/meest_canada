@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .page{
     .service_page{
       &__main-img{
@@ -16,11 +18,14 @@
         &__item{
           display: block;
           cursor: pointer;
+          padding: 0;
+          &__title {
+            padding: 17px 18px 18px 20px;
+          }
           &.active{
             background-color: transparent;
             padding: unset;
             .service_page__menu__item__title{
-              padding: 17px 18px 18px 20px;
               border-radius: 14px;
               background: #F8F9FA;
               img{

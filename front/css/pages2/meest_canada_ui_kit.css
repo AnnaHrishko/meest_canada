@@ -523,13 +523,16 @@ div[data-scrollbar]::-webkit-scrollbar-thumb:hover {
 .page .service_page__menu__item {
   display: block;
   cursor: pointer;
+  padding: 0;
+}
+.page .service_page__menu__item__title {
+  padding: 17px 18px 18px 20px;
 }
 .page .service_page__menu__item.active {
   background-color: transparent;
   padding: unset;
 }
 .page .service_page__menu__item.active .service_page__menu__item__title {
-  padding: 17px 18px 18px 20px;
   border-radius: 14px;
   background: #F8F9FA;
 }
