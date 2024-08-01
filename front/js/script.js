@@ -219,4 +219,124 @@ $( ".see-more-btn" ).on('click', function(e) {
 });
 
 
+//popup
+// Template function which adds CSS flag and displays country name
+function flagTemplate(country){
+  return $("<span class='flag-icon flag-icon-" + country.id + " '></span><span class='flag-text'>" + country.text + "</span>");
+}
+
+// Generate correct URL based on entered search term
+function generateUrl(params){
+  if(params.term){
+    return "https://restcountries.com/v3.1/name/" + params.term;
+  } else {
+    return "https://restcountries.com/v3.1/all";
+  }
+}
+
+// Initialise select2 using flagTemplate function for both result and selection
+$('.country_select').select2({
+  // Set template for results and selection
+  templateResult: flagTemplate,
+  templateSelection: flagTemplate,
+  // Set placeholder text
+  placeholder: 'Сountry',
+  // Load country list from https://restcountries.com
+  ajax: {
+    url: generateUrl,
+    cache: 250,
+    dataType: "json",
+    processResults: function(data) {      
+      return {
+        results: data
+          .map(x => ({id: x.cca2.toLowerCase(), text: x.name.common}))
+          .sort((a, b) => ('' + a.text).localeCompare(b.text))
+      };
+    }
+  }
+});
+
+$('.country_select').on('change', function() {
+  var selectedCountry = $(this).val();
+  if (selectedCountry === 'ua') {
+    $('.form-row.oblast').show();
+  } else {
+    $('.form-row.oblast').hide();
+  }
+});
+
+// $(document).on('change', '.country_select', function() {
+//   $(this).valid();
+// });
+
+$('.preliminary-card').click(function(){
+  $('.preliminary-card').not(this).removeClass('active')
+  $(this).addClass('active')
+  var lenght = $(this).find('.parametrs .lenght').text()
+  var height = $(this).find('.parametrs .height').text()
+  var width = $(this).find('.parametrs .width').text()
+  console.log(lenght, height, width)
+  $('.input-lenght').val(lenght).valid()
+  $('.input-height').val(height).valid()
+  $('.input-width').val(width).valid()
+})
+
+$(document).on('change', '.input-lenght', function() {
+  $(this).valid();
+});
+$(document).on('change', '.input-height', function() {
+  $(this).valid();
+});
+$(document).on('change', '.input-width', function() {
+  $(this).valid();
+});
+
+if (window.matchMedia("(max-width: 991px)").matches){
+  new SimpleBar(document.getElementById('preliminary-wrapper'));
+}
+
+$(function() {
+  $(".form-calculator-form").validate({
+      rules: {
+          "parcel_weight": {
+              required: true,
+              number: true,
+          },
+          "lenght": {
+              required: true,
+          },
+          "height": {
+            required: true,
+          },
+          "width": {
+            required: true,
+          },
+      },
+      messages: {
+          "parcel_weight": {
+              required: "Required field",
+              number: "Enter only number",
+          },
+          "lenght": {
+              required: "Required field",
+          },
+          "height": {
+            required: "Required field",
+          },
+          "width": {
+            required: "Required field",
+          },
+      },
+  });
+});
+
+$('.open-calculator-popup').click(function(){
+  $('.calculator-popup').fadeIn()
+})
+
+$('.calculator-popup .popup-closer').click(function(){
+  $('.calculator-popup').fadeOut()
+})
+
+
 
