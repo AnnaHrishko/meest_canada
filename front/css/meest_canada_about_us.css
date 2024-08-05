@@ -3071,6 +3071,7 @@ html {
 }
 .preliminary-wrapper .preliminary-card {
   width: calc(25% - 10px);
+  cursor: pointer;
 }
 @media (max-width: 1150px) {
   .preliminary-wrapper .preliminary-card {
@@ -3246,6 +3247,7 @@ html {
   justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .main-button {
@@ -3263,6 +3265,7 @@ html {
   text-decoration: none;
   border: none;
   position: relative;
+  cursor: pointer;
 }
 .main-button span {
   margin-right: 25px;

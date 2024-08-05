@@ -519,6 +519,7 @@
     }
     .preliminary-card{
         width: calc(25% - 10px);
+        cursor: pointer;
         @media(max-width: 1150px){
             width: calc(100%/3 - 10px);
         }
@@ -671,6 +672,7 @@
     justify-content: center;
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
 }
 .main-button {
     background: #2361A9;
@@ -687,6 +689,7 @@
     text-decoration: none;
     border: none;
     position: relative;
+    cursor: pointer;
     span{
         margin-right: 25px;
     }
